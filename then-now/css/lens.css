@@ -1,0 +1,34 @@
+/* Magic Lens css
+Do not change the following three styles
+(Unless you know more than the auther does!)
+*/
+
+#lens-container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding: 0;
+    /* padding-bottom will be overwritten by JavaScript later */
+    padding-bottom: 100%;
+}
+
+#lens-container > svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#lens-image {
+    opacity: .85;
+}
+
+/*
+This is a place holder for the styles that might appear in your 
+own design. Should prbably be in a separate css file.
+*/
+
+.yourDivHere {
+	width: 85%;
+}
