@@ -3,26 +3,26 @@
 
 var ctrl = new ScrollMagic.Controller();
 
-// Defin arrays for target elements
-
+// Define arrays for image sequence elements
+// These are for gallery image dissolves, not for maps
 var imageSeqElems = [$("#image-sequence1"), $("#image-sequence2")];
 var imageSeqNames = ["#image-sequence1", "#image-sequence2"];
-
-
 // ----- Hide images ----
 // Hide all but title and first image
 // $("#image-sequence1").children().each(function(i) {
 imageSeqElems[0].children().each(function(i) {
+// imageSeqElems[0].children().each(i => {
 	// Skip fist child, the title, and first image -- it's a pin, not a transition
 	if (i > 0) {
+		// console.log(" - this arrow: " + $(this).prop('nodeName'))
 		TweenMax.set(this, {autoAlpha:0});
 	}
 });
-
 // Hide all but title and first image
 imageSeqElems[1].children().each(function(i) {
 	// Skip fist child, the title, and first image -- it's a pin, not a transition
 	if (i > 1) {
+		// console.log(" - this function: " + $(this).prop('nodeName'))
 		TweenMax.set(this, {autoAlpha:0});
 	}
 });
@@ -30,6 +30,7 @@ imageSeqElems[1].children().each(function(i) {
 
 // --- Pin Chapter Titles ---
 // Set pin for first chapter TITLE
+// console.log("-- chapter1 height: " + $("#chapter1").height());
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: "#chapter1-title", // point of execution
 	duration: $("#chapter1").height(),
@@ -40,10 +41,12 @@ var containerScene = new ScrollMagic.Scene({
 .addTo(ctrl);
 
 // Set pin for 2nd chapter TITLE Hope or Hoax
+// console.log("-- chapter2 height: " + $("#chapter2").height());
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: "#chapter2-title", // point of execution
 	// Total HACK! Chapter 2 height isn't working
-	duration: $("#chapter1").height(),
+	// duration: $("#chapter1").height(),
+	duration: $("#chapter2").height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 })
 .setPin("#chapter2-title", {pushFollowers: false})
