@@ -29,6 +29,9 @@ imageSeqElems[1].children().each(function(i) {
 
 
 // --- Pin Chapter Titles ---
+var ChapTitleElementNames = ["#chapter1-title", "#chapter2-title", "#chapter3-title", "#chapter4-title"];
+
+
 // Set pin for first chapter TITLE
 // console.log("-- chapter1 height: " + $("#chapter1").height());
 var containerScene = new ScrollMagic.Scene({
