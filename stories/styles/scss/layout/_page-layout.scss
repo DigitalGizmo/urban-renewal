@@ -47,10 +47,11 @@ header.story-title {
 }
 
 div.full-image p {
-	width: 15%;
-	float: left;
-	padding: $base-spacing;
 	border: $base-border;
+	float: left;
+	margin-left: $base-spacing;
+	padding: $base-spacing;
+	width: 15%;
 }
 
 .narrative div img {
@@ -73,6 +74,7 @@ div.full-image p {
 	background-color: $accent-color;
 	padding: .75em;
 	text-align: center;
+	z-index: 9;
 }
 
 .image-panel div img, div.full-image img	{
