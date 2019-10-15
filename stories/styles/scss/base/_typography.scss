@@ -5,15 +5,12 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-// for Officina Sans:
-// bold: font-weight: 700; font-style: normal;
-// book: font-weight: 400; font-style: normal;
-// medium: font-weight: 500; font-style: normal;
 
 body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $weight-book;
   line-height: $base-line-height;
 }
 
@@ -24,6 +21,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
+  font-weight: $weight-book;
   line-height: $heading-line-height;
   margin: 0;
 }
@@ -67,6 +65,23 @@ h1 {
   text-align: center;
 }
 
+.story-title h1 {
+  margin: 0;
+}
+
 h3 {
   text-align: center;
+
+  &.grid-title {
+    color: $accent-color;
+    letter-spacing: .075em;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+  }
+}
+
+.chapter-title h2 {
+  letter-spacing: .075em;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;  
 }

@@ -1,0 +1,23 @@
+// navigation
+nav.main-menu {
+	text-align: center;
+
+	li {
+		border-right: thin solid $beige;
+		display: inline;
+		font-size: $small-font-size;
+		font-weight: $weight-book;
+		letter-spacing: .15em;
+		padding: 0 2em;
+		text-transform: uppercase;
+	
+		&.last-menu-item {
+			border-right: none;
+		}
+
+		&.selected a {
+			color: $accent-color;
+		}
+	}
+
+}

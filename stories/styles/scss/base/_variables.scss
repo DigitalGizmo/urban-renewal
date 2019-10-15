@@ -15,6 +15,10 @@ $base-font-size: 1.25em;
 $medlarge-font-size: 1.5em;
 $large-font-size: 1.75em;
 $largest-font-size: 2.25em;
+// for Officina Sans:
+$weight-book: 400;
+$weight-medium: 500;
+$weight-bold: 700;
 
 // Line height
 $base-line-height: 1.6;
@@ -22,22 +26,23 @@ $heading-line-height: 1.2;
 
 // Spacing
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
 $tiny-spacing: $base-spacing / 4;
+$small-spacing: $base-spacing / 2;
 $large-spacing: $base-spacing * 2;
 $xlarge-spacing: $base-spacing * 4;
 
 // Colors
 $dark-gray: #353526 !default;
 $medium-gray: #999;
-$beige: #F0F0DF;
+//$beige: #F0F0DF;
+$beige: #e4e0c7;
 
 // Font Colors
 $base-font-color: $beige !default;
 $light-font-color: $medium-gray;
 $accent-color: #B25900;
 $action-color: $beige;
-$hover-color: darken($accent-color, 25%);
+$hover-color: lighten($accent-color, 15%);
 
 // Background Colors
 $base-background-color: $dark-gray;
