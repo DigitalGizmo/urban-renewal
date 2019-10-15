@@ -85,7 +85,7 @@ var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[0], // point of execution
 	duration: $("#caption-sequence1").height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-	offset: -50 // was 320
+	offset: -60 // still tucks under title bar a little
 })
 .setPin(imageSeqNames[0], {pushFollowers: false})
 .addIndicators()
@@ -97,7 +97,7 @@ var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[1], // point of execution
 	duration: $("#caption-sequence2").height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-	offset: -50 // was 320
+	offset: -60 
 })
 .setPin(imageSeqNames[1], {pushFollowers: false})
 .addIndicators()
