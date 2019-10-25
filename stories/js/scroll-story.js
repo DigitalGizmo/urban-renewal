@@ -112,6 +112,19 @@ var containerScene = new ScrollMagic.Scene({
 .addTo(ctrl);
 
 
+// Set pin for Image container
+// Chapter 4 - Designing South Mall
+var containerScene = new ScrollMagic.Scene({
+	triggerElement: imageSeqNames[2], // point of execution
+	duration: $("#caption-sequence4").height(),
+	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+	offset: -60 
+})
+.setPin(imageSeqNames[2], {pushFollowers: false})
+.addIndicators()
+.addTo(ctrl);
+
+
 
 // Create scenes
 // Loop through all divs in text-panel
