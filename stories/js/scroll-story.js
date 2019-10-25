@@ -5,8 +5,8 @@ var ctrl = new ScrollMagic.Controller();
 
 // Define arrays for image sequence elements
 // These are for gallery image dissolves, not for maps
-var imageSeqElems = [$("#image-sequence1"), $("#image-sequence2")];
-var imageSeqNames = ["#image-sequence1", "#image-sequence2"];
+var imageSeqElems = [$("#image-sequence1"), $("#image-sequence2"), $("#image-sequence4")];
+var imageSeqNames = ["#image-sequence1", "#image-sequence2", "#image-sequence4"];
 // ----- Hide images ----
 // Hide all but title and first image
 // $("#image-sequence1").children().each(function(i) {
@@ -76,7 +76,15 @@ var containerScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(ctrl);
 
-
+// Set pin for 5th chapter TITLE
+var containerScene = new ScrollMagic.Scene({
+	triggerElement: "#chapter5-title", // point of execution
+	duration: $("#chapter5").height(),
+	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+})
+.setPin("#chapter5-title", {pushFollowers: false})
+.addIndicators()
+.addTo(ctrl);
 
 // --- Pin Gallery images
 // Set pin for first GALLERY Image container
@@ -134,8 +142,6 @@ $("#caption-sequence1").children().each(function(i) {
 		.addTo(ctrl);
 	} // end if i > 0
 });
-
-
 
 
 
