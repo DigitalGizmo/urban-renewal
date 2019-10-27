@@ -1,125 +1,56 @@
 // Midway on shifting element objects and names to arrays in order to 
 // create multi-chapter loops for each task.
 
-var ctrl = new ScrollMagic.Controller();
+let ctrl = new ScrollMagic.Controller();
 
 // Define arrays for image sequence elements
 // These are for gallery image dissolves, not for maps
-var imageSeqElems = [$("#image-sequence1"), $("#image-sequence2"), $("#image-sequence4")];
-var imageSeqNames = ["#image-sequence1", "#image-sequence2", "#image-sequence4"];
-// ----- Hide images ----
+const imageSeqElems = [$("#image-sequence1"), $("#image-sequence4"), $("#image-sequence5")];
+const imageSeqNames = ["#image-sequence1", "#image-sequence4", "#image-sequence5"];
+const captionSeqElems = [$("#caption-sequence1"), $("#caption-sequence4"), $("#caption-sequence5")];
+
+// ----- HIDE IMAGES ----
+
 // Hide all but title and first image
-// $("#image-sequence1").children().each(function(i) {
-imageSeqElems[0].children().each(function(i) {
-// imageSeqElems[0].children().each(i => {
-	// Skip fist child, the title, and first image -- it's a pin, not a transition
-	if (i > 0) {
-		// console.log(" - this arrow: " + $(this).prop('nodeName'))
-		TweenMax.set(this, {autoAlpha:0});
-	}
-});
-// Hide all but title and first image
-imageSeqElems[1].children().each(function(i) {
-	// Skip fist child, the title, and first image -- it's a pin, not a transition
-	if (i > 0) {
-		// console.log(" - this function: " + $(this).prop('nodeName'))
-		TweenMax.set(this, {autoAlpha:0});
-	}
-});
-// Hide all but title and first image
-imageSeqElems[2].children().each(function(i) {
-	// Skip fist child, the title, and first image -- it's a pin, not a transition
-	if (i > 0) {
-		// console.log(" - this function: " + $(this).prop('nodeName'))
-		TweenMax.set(this, {autoAlpha:0});
-	}
-});
+// loop through imageSeqElems
+for (let i = 0; i < imageSeqElems.length; i++) {
+	imageSeqElems[i].children().each(function(i) {
+	// imageSeqElems[0].children().each(i => {
+		// Skip fist child, the title, and first image -- it's a pin, not a transition
+		if (i > 0) {
+			// console.log(" - this arrow: " + $(this).prop('nodeName'))
+			TweenMax.set(this, {autoAlpha:0});
+		}
+	});
+}
 
-// --- Pin Chapter Titles ---
-var ChapTitleElementNames = ["#chapter1-title", "#chapter2-title", "#chapter3-title", "#chapter4-title", "#chapter5-title", "#chapter6-title", "#chapter7-title"];
+// --- PIN CHAPTER TITLES ---
 
+const ChapTitleElems = [$("#chapter1"), $("#chapter2"), $("#chapter3"), 
+	$("#chapter4"), $("#chapter5"), $("#chapter6"), $("#chapter7")];
+const ChapTitleElemNames = ["#chapter1-title", "#chapter2-title", "#chapter3-title", 
+	"#chapter4-title", "#chapter5-title", "#chapter6-title", "#chapter7-title"];
 
-// Set pin for first chapter TITLE
-// console.log("-- chapter1 height: " + $("#chapter1").height());
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter1-title", // point of execution
-	duration: $("#chapter1").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter1-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
+let titleScene = null;
+// Loop through titles
+for (let i = 0; i < ChapTitleElems.length; i++) {
+	titleScene = new ScrollMagic.Scene({
+		triggerElement: ChapTitleElemNames[i], // point of execution
+		duration: ChapTitleElems[i].height(),
+		triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
+	})
+	.setPin(ChapTitleElemNames[i], {pushFollowers: false})
+	.addIndicators()
+	.addTo(ctrl);
+}
 
-// Set pin for 2nd chapter TITLE Hope or Hoax
-// console.log("-- chapter2 height: " + $("#chapter2").height());
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter2-title", // point of execution
-	// Total HACK! Chapter 2 height isn't working
-	// duration: $("#chapter1").height(),
-	duration: $("#chapter2").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter2-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
+// --- PIN GALLERY IMAGES -----
 
-// Set pin for 3rd chapter TITLE
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter3-title", // point of execution
-	duration: $("#chapter3").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter3-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
-
-// Set pin for 4th chapter TITLE
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter4-title", // point of execution
-	duration: $("#chapter4").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter4-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
-
-// Set pin for 5th chapter TITLE
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter5-title", // point of execution
-	duration: $("#chapter5").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter5-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
-
-// Set pin for 6th chapter TITLE
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter6-title", // point of execution
-	duration: $("#chapter6").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter6-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
-
-// Set pin for 7th chapter TITLE
-var containerScene = new ScrollMagic.Scene({
-	triggerElement: "#chapter7-title", // point of execution
-	duration: $("#chapter7").height(),
-	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
-})
-.setPin("#chapter7-title", {pushFollowers: false})
-.addIndicators()
-.addTo(ctrl);
-
-
-// --- Pin Gallery images
 // Set pin for first GALLERY Image container
 // Chapter 1 - Immediate Response
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[0], // point of execution
-	duration: $("#caption-sequence1").height(),
+	duration: captionSeqElems[0].height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 	offset: -60 // still tucks under title bar a little
 })
@@ -131,7 +62,7 @@ var containerScene = new ScrollMagic.Scene({
 // Chapter 4 - Designing South Mall
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[1], // point of execution
-	duration: $("#caption-sequence2").height(),
+	duration: captionSeqElems[1].height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 	offset: -60 
 })
@@ -144,7 +75,7 @@ var containerScene = new ScrollMagic.Scene({
 // Chapter 4 - Designing South Mall
 var containerScene = new ScrollMagic.Scene({
 	triggerElement: imageSeqNames[2], // point of execution
-	duration: $("#caption-sequence4").height(),
+	duration: captionSeqElems[2].height(),
 	triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 	offset: -60 
 })
@@ -154,15 +85,16 @@ var containerScene = new ScrollMagic.Scene({
 
 
 
-// Create scenes
+// ----- CREATE DISSOLVE SEQUENCES ----
+
 // Loop through all divs in text-panel
 // Chapter 1 Immediate Response
-$("#caption-sequence1").children().each(function(i) {
+captionSeqElems[0].children().each(function(i) {
 	// Skip first image -- it's a pin, not a transition
 	if (i > 0) {
 		// Current target is +1 because 1st div in image panel is title
-		var targetPrev = imageSeqElems[1].children().eq(i -1);
-		let target = imageSeqElems[1].children().eq(i);
+		var targetPrev = imageSeqElems[0].children().eq(i -1);
+		let target = imageSeqElems[0].children().eq(i);
 
 		var tl = new TimelineMax();
 		// Base transitin condition class name
@@ -189,12 +121,12 @@ $("#caption-sequence1").children().each(function(i) {
 // Create scenes
 // Loop through all divs in text-panel
 // ----- Chapter 4 Designing South Mall ----
-$("#caption-sequence2").children().each(function(i) {
+captionSeqElems[1].children().each(function(i) {
 	// Skip first image -- it's a pin, not a transition
 	if (i > 0) {
 		// Current target is +1 because 1st div in image panel is title
-		var targetPrev = imageSeqElems[1].children().eq(i);
-		let target = imageSeqElems[1].children().eq(i + 1);
+		var targetPrev = imageSeqElems[1].children().eq(i - 1);
+		let target = imageSeqElems[1].children().eq(i);
 
 		var tl = new TimelineMax();
 		// Base transitin condition class name
@@ -219,12 +151,12 @@ $("#caption-sequence2").children().each(function(i) {
 // Create scenes
 // Loop through all divs in text-panel
 // ----- Chapter 4 Designing South Mall ----
-$("#caption-sequence4").children().each(function(i) {
+captionSeqElems[2].children().each(function(i) {
 	// Skip first image -- it's a pin, not a transition
 	if (i > 0) {
 		// Current target is +1 because 1st div in image panel is title
-		var targetPrev = imageSeqElems[1].children().eq(i);
-		let target = imageSeqElems[1].children().eq(i + 1);
+		var targetPrev = imageSeqElems[2].children().eq(i - 1);
+		let target = imageSeqElems[2].children().eq(i);
 
 		var tl = new TimelineMax();
 		// Base transitin condition class name
