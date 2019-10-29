@@ -75,13 +75,18 @@ h3 {
   &.grid-title {
     color: $accent-color;
     letter-spacing: .075em;
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px $dark-gray;
     text-transform: uppercase;
   }
 }
 
 .chapter-title h2 {
   letter-spacing: .075em;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px $dark-gray;
   text-transform: uppercase;  
 }
+
+.narrative p, ol li {
+  font-size: $base-font-size;
+}
+

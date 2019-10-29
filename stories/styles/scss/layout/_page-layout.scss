@@ -26,7 +26,7 @@ header.story-title {
 }
 
 .top-image {
-	margin-top: -5em;
+	margin-top: -4.9em;
 	position: relative;
 	z-index: 1;
 }
@@ -36,16 +36,14 @@ header.story-title {
 	max-width: 60%;
 }
 
-.narrative p, ol li {
-	font-size: $base-font-size;
-}
-
+// captions for static full screen images and inline images
 .narrative div p, div.full-image p {
 	color: $beige;
 	font-size: $small-font-size;
 	margin: .5em 0 2em 0;
 }
 
+// captions for static full screen images
 div.full-image p {
 	border: $base-border;
 	float: left;
@@ -59,7 +57,7 @@ div.full-image p {
 }
 
 .image-panel	{
-	border: 1px solid blue;		
+//	border: 1px solid blue;		
 	height: 80vh;
 	position: relative;
 }
@@ -82,8 +80,8 @@ div.full-image p {
 	margin-bottom: $base-spacing;
 }
 
+// captions for image gallery images
 .caption-panel	{
-	width: 25%;
 	position: relative;
 	z-index: 10;
 	margin: 2em;
@@ -96,10 +94,32 @@ div.full-image p {
 	margin-bottom: 90vh;
 	padding: 2em;
 	margin-top: -10em;
+	width: 60%;
 
-	p {
-		color: $beige;
+	&.narrower {
+		width: 30%;
 	}
+
+	p.gallery-caption {
+		width: 25%;
+		color: $beige;
+		font-size: $small-font-size;
+		float: left;
+	}
+
+	p.gallery-quote {
+		border-left: $base-border;
+		font-style: italic;
+		font-size: $base-font-size;
+		margin-left: 30%;
+		padding-left: 2%;
+	}
+
+	p.gallery-text {
+		font-size: $smallish-font-size;
+		font-style: normal;
+	}
+
 }
 //do we still need this? if so, put the class back in the markup
 .caption-panel div.last-one {

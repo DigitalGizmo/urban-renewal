@@ -160,14 +160,18 @@ h3 {
 h3.grid-title {
   color: #B25900;
   letter-spacing: .075em;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px #353526;
   text-transform: uppercase;
 }
 
 .chapter-title h2 {
   letter-spacing: .075em;
-  text-shadow: 2px 2px black;
+  text-shadow: 1px 1px #353526;
   text-transform: uppercase;
+}
+
+.narrative p, ol li {
+  font-size: 1.25em;
 }
 
 body {
@@ -194,7 +198,7 @@ header.story-title {
 }
 
 .top-image {
-  margin-top: -5em;
+  margin-top: -4.9em;
   position: relative;
   z-index: 1;
 }
@@ -202,10 +206,6 @@ header.story-title {
 .narrative {
   margin: 1em auto 3em auto;
   max-width: 60%;
-}
-
-.narrative p, ol li {
-  font-size: 1.25em;
 }
 
 .narrative div p, div.full-image p {
@@ -227,7 +227,6 @@ div.full-image p {
 }
 
 .image-panel {
-  border: 1px solid blue;
   height: 80vh;
   position: relative;
 }
@@ -251,7 +250,6 @@ div.full-image p {
 }
 
 .caption-panel {
-  width: 25%;
   position: relative;
   z-index: 10;
   margin: 2em;
@@ -264,9 +262,27 @@ div.full-image p {
   margin-bottom: 90vh;
   padding: 2em;
   margin-top: -10em;
+  width: 60%;
 }
-.caption-panel div p {
+.caption-panel div.narrower {
+  width: 30%;
+}
+.caption-panel div p.gallery-caption {
+  width: 25%;
   color: #e4e0c7;
+  font-size: 0.75em;
+  float: left;
+}
+.caption-panel div p.gallery-quote {
+  border-left: 1px solid #e4e0c7;
+  font-style: italic;
+  font-size: 1.25em;
+  margin-left: 30%;
+  padding-left: 2%;
+}
+.caption-panel div p.gallery-text {
+  font-size: 1em;
+  font-style: normal;
 }
 
 .caption-panel div.last-one {
