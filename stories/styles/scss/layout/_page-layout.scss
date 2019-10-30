@@ -84,7 +84,7 @@ div.full-image p {
 .caption-panel	{
 	position: relative;
 	z-index: 10;
-	margin: 2em;
+	margin: 1em;
 }
 
 .caption-panel div {
@@ -92,7 +92,7 @@ div.full-image p {
 	border: thin solid $beige;
 	opacity: 0.75;
 	margin-bottom: 90vh;
-	padding: 2em;
+	padding: 1em;
 	margin-top: -10em;
 	width: 60%;
 
@@ -110,7 +110,7 @@ div.full-image p {
 	p.gallery-quote {
 		border-left: $base-border;
 		font-style: italic;
-		font-size: $base-font-size;
+		font-size: $smallish-font-size;
 		margin-left: 30%;
 		padding-left: 2%;
 	}
