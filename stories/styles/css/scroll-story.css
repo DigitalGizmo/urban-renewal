@@ -45,9 +45,7 @@ a:hover {
 
 ul,
 ol {
-  list-style-type: none;
   margin: 0;
-  padding: 0;
 }
 
 dl {
@@ -223,6 +221,7 @@ div.full-image p {
 }
 
 .narrative div img {
+  border: thin solid #615c3d;
   width: 90%;
 }
 
@@ -245,6 +244,7 @@ div.full-image p {
 }
 
 .image-panel div img, div.full-image img {
+  border: thin solid #615c3d;
   max-width: 100%;
   margin-bottom: 1.6em;
 }

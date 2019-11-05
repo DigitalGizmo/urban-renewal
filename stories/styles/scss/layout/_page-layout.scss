@@ -53,6 +53,7 @@ div.full-image p {
 }
 
 .narrative div img {
+	border: thin solid rgb(97, 92, 61);
 	width: 90%;
 }
 
@@ -76,6 +77,7 @@ div.full-image p {
 }
 
 .image-panel div img, div.full-image img	{
+	border: thin solid rgb(97, 92, 61);
 	max-width: 100%;
 	margin-bottom: $base-spacing;
 }
