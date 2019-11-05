@@ -249,6 +249,8 @@ div.full-image p {
   margin-bottom: 1.6em;
 }
 
+#mapdiv img {border: none;}
+
 .caption-panel {
   position: relative;
   z-index: 10;
