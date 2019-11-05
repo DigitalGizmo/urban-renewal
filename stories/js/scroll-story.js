@@ -180,7 +180,7 @@ captionSeqElems[2].children().each(function(i) {
 
 // --------- MAP -------------
 
-// Set pin for wide map
+// Set pin for  map
 var containerScene = new ScrollMagic.Scene({
     // triggerElement: '.container0',
     triggerElement: '#image-sequence3',
@@ -192,27 +192,38 @@ var containerScene = new ScrollMagic.Scene({
 .on('start', function () {
     // console.log("passed trigger");
     // setPoint defined in simpl-map.js
-    setPoint(42.6503, -73.758, 15, 'none');
-	// treatmap.setView([42.5, -72], 11) ;
+    setPoint(42.6503, -73.76, 15, 'none');
+	// Remove Sanborn
+	removeSanborn();
 })
 .addIndicators()
 .addTo(ctrl);
 
-// Add Take area before zooming
+
+// Add Sanborn map
 var mapScene = new ScrollMagic.Scene({
-    triggerElement: '#thing3'
-    // duration: 3500, // was 1300
-    // duration: $(".text-panel").height(),
-    // offset: 200 // was 320
+    triggerElement: '#thing2'
 })
 .on('start', function () {
     // setPoint defined in simpl-map.js
-    setPoint(42.6503, -73.758, 15, 'take');
+    addSanborn();
+    setPoint(42.6487, -73.76, 16); // -73.763
 })
 .addIndicators()
 .addTo(ctrl);
 
-// Add Take area before zooming
+// Add State
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing3'
+})
+.on('start', function () {
+    // setPoint defined in simpl-map.js
+    showDistrict(42.6503, -73.76, 16, 0);
+})
+.addIndicators()
+.addTo(ctrl);
+
+// Show Boarding
 var mapScene = new ScrollMagic.Scene({
     triggerElement: '#thing4'
     // duration: 3500, // was 1300
@@ -221,22 +232,22 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     // setPoint defined in simpl-map.js
-    setPoint(42.649912, -73.762082, 16, 'take');
+    showDistrict(42.650, -73.761, 16, 1);
 })
 .addIndicators()
 .addTo(ctrl);
 
-// Second thing
-var mapScene = new ScrollMagic.Scene({
-    triggerElement: '#thing5'
-    // duration: $(".text-panel").height(),
-    // offset: 200 // was 320
-})
-.on('start', function () {
-    setPoint(42.651189, -73.756739, 17, 'none');
-})
-.addIndicators()
-.addTo(ctrl);
+// // Second thing
+// var mapScene = new ScrollMagic.Scene({
+//     triggerElement: '#thing5'
+//     // duration: $(".text-panel").height(),
+//     // offset: 200 // was 320
+// })
+// .on('start', function () {
+//     setPoint(42.651189, -73.756739, 16, 'none');
+// })
+// .addIndicators()
+// .addTo(ctrl);
 
 
 

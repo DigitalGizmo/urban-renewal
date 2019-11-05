@@ -1,9 +1,7 @@
 // ---------- MAP ----------
 
-var treatmap;
-
 // Define base layer.
-var stamen = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain'
+const stamen = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain'
 	// + 'background/{z}/{x}/{y}.{ext}', {
 	+ '/{z}/{x}/{y}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, '
@@ -14,10 +12,18 @@ var stamen = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain'
 	ext: 'png'
 });
 
+// ----- define historic overlay ----- 
+const sanborn   = L.tileLayer('tiles/sanborn/{z}/{x}/{y}.png', {
+	attribution: 'Sanborn map',
+	// bounds: mybounds, //tempbounds
+	minZoom: 15,
+	maxZoom: 16,
+	//opacity: .7,
+    tms: true
+})
 
 // "Take" area from Chris Reese map
-
-var block_layer={
+const block_layer={
     "type": "FeatureCollection",
     "name": "TestTake2",
     "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
@@ -30,14 +36,35 @@ var block_layer={
         }
     ]
 }
+const blockLayer = new L.GeoJSON(block_layer);
 
+const district_state = {
+	"type": "FeatureCollection",
+	"name": "district-state",
+	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+	"features": [
+	{ "type": "Feature", "properties": { "id": 1, "name": "State" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -73.75989884186076, 42.653339402122143 ], [ -73.756649332285008, 42.651490128484717 ], [ -73.75739290810391, 42.650785835002196 ], [ -73.760639169552576, 42.652645445105343 ], [ -73.75989884186076, 42.653339402122143 ] ] ] ] } }
+	]
+}
+const districtState = new L.GeoJSON(district_state);
 
-var blockLayer = new L.GeoJSON(block_layer);
-// var geojsonLayer = new L.GeoJSON.AJAX("Rivers.json"); 
-// regular map setting
+const district_boarding = {
+	"type": "FeatureCollection",
+	"name": "district-boarding",
+	"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+	"features": [
+	{ "type": "Feature", "properties": { "id": 2, "name": "Boarding" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -73.76072145296024, 42.652553080127312 ], [ -73.75653817493945, 42.650180965685465 ], [ -73.757646647226053, 42.649121826627415 ], [ -73.761762453020722, 42.651539320385709 ], [ -73.76072145296024, 42.652553080127312 ] ] ] ] } },
+	{ "type": "Feature", "properties": { "id": 2, "name": "Boarding South" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -73.762263675272052, 42.651064336360569 ], [ -73.758106260264128, 42.648689179463155 ], [ -73.75884186951771, 42.647980396627027 ], [ -73.762976953091268, 42.65039084533084 ], [ -73.762263675272052, 42.651064336360569 ] ] ] ] } }
+	]
+}
+const districtBoarding = new L.GeoJSON(district_boarding);
+
+const districts = [districtState, districtBoarding];
+
 // ----- set map -----
-treatmap = L.map('mapdiv', {
-	center: [42.6503, -73.758], // -72.45
+// regular map setting
+const urmap = L.map('mapdiv', {
+	center: [42.6503, -73.76], // -72.45
 	zoom: 15, // 9
 	layers: [stamen] // topobase stamen , siteMarkers hitchcock // , block_layer
 });
@@ -46,25 +73,61 @@ treatmap = L.map('mapdiv', {
 //     handler.disable();
 // });
 
-treatmap.dragging.disable();
-treatmap.touchZoom.disable();
-treatmap.doubleClickZoom.disable();
-treatmap.scrollWheelZoom.disable();
-treatmap.boxZoom.disable();
-treatmap.keyboard.disable();
+urmap.dragging.disable();
+urmap.touchZoom.disable();
+urmap.doubleClickZoom.disable();
+urmap.scrollWheelZoom.disable();
+urmap.boxZoom.disable();
+urmap.keyboard.disable();
 
-function setPoint(lat, lon, zoomLevel, layerName) {
-	// treatmap.setView([42.5, -72], 11) 
-	treatmap.setView([lat, lon], zoomLevel);
-	// treatmap.removeLayer(block_layer);
+
+function addSanborn() {
+	if (!urmap.hasLayer(sanborn)) {
+		urmap.addLayer(sanborn);
+	}
+	// Since State was first on it will be last to leave in reverse
+	if (urmap.hasLayer(districtState)) {
+		urmap.removeLayer(districtState);
+	}
+}
+
+function removeSanborn() {
+	if (urmap.hasLayer(sanborn)) {
+		urmap.removeLayer(sanborn);
+	}
+}
+
+function setPoint(lat, lon, zoomLevel) {
+	urmap.setView([lat, lon], zoomLevel);
+}
+
+function showDistrict(lat, lon, zoomLevel, districtId) {
+	setPoint(lat, lon, zoomLevel) ;
+	// Because we can only get to this sequentially we (should)
+	// know that it's not already present
+	districts[districtId].addTo(urmap);
+	// remove any other districts
+	for (let i = 0; i < districts.length; i++) {
+		if (i != districtId) { // don't delete the one we just added!			
+			if (urmap.hasLayer(districts[i])) {
+				// console.log(" -- got to not-take");
+				urmap.removeLayer(districts[i]);
+			}
+		}
+	}
+}
+
+function showState(lat, lon, zoomLevel, layerName) {
+	setPoint(lat, lon, zoomLevel) ;
+	// urmap.removeLayer(block_layer);
 	if (layerName == 'take') {
-		// treatmap.addLayer(block_layer);
-		// L.geoJSON(block_layer).addTo(treatmap);
-		blockLayer.addTo(treatmap);
+		// urmap.addLayer(block_layer);
+		// L.geoJSON(block_layer).addTo(urmap);
+		districtState.addTo(urmap);
 	} else {
-		if (treatmap.hasLayer(blockLayer)) {
+		if (urmap.hasLayer(districtState)) {
 			// console.log(" -- got to not-take");
-			treatmap.removeLayer(blockLayer);
+			urmap.removeLayer(districtState);
 		}
 	}
 }
