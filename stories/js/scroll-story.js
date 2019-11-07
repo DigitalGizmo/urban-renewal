@@ -218,7 +218,7 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     // setPoint defined in simpl-map.js
-    showDistrict(42.6503, -73.76, 16, 0);
+    showDistrict(42.6515, -73.760, 17, 0);
 })
 .addIndicators()
 .addTo(ctrl);
@@ -226,16 +226,51 @@ var mapScene = new ScrollMagic.Scene({
 // Show Boarding
 var mapScene = new ScrollMagic.Scene({
     triggerElement: '#thing4'
-    // duration: 3500, // was 1300
-    // duration: $(".text-panel").height(),
-    // offset: 200 // was 320
 })
 .on('start', function () {
-    // setPoint defined in simpl-map.js
-    showDistrict(42.650, -73.761, 16, 1);
+    showDistrict(42.6505, -73.761, 17, 1);
+}).addIndicators().addTo(ctrl);
+
+// Show Hudson
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing5'
 })
-.addIndicators()
-.addTo(ctrl);
+.on('start', function () {
+    showDistrict(42.6505, -73.761, 17, 2);
+}).addIndicators().addTo(ctrl);
+
+// Show Cathedral
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing6'
+})
+.on('start', function () {
+    showDistrict(42.648, -73.763, 17, 3);
+}).addIndicators().addTo(ctrl);
+
+// Show Market
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing7'
+})
+.on('start', function () {
+    showDistrict(42.648, -73.757, 17, 4);
+}).addIndicators().addTo(ctrl);
+
+// Show Pearl
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing8'
+})
+.on('start', function () {
+    showDistrict(42.6471, -73.755, 18, 5);
+}).addIndicators().addTo(ctrl);
+
+// Show Gut
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing9'
+})
+.on('start', function () {
+    showDistrict(42.6465, -73.755, 17, 6);
+}).addIndicators().addTo(ctrl);
+
 
 // // Second thing
 // var mapScene = new ScrollMagic.Scene({
