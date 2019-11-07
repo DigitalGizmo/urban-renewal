@@ -272,17 +272,14 @@ var mapScene = new ScrollMagic.Scene({
 }).addIndicators().addTo(ctrl);
 
 
-// // Second thing
-// var mapScene = new ScrollMagic.Scene({
-//     triggerElement: '#thing5'
-//     // duration: $(".text-panel").height(),
-//     // offset: 200 // was 320
-// })
-// .on('start', function () {
-//     setPoint(42.651189, -73.756739, 16, 'none');
-// })
-// .addIndicators()
-// .addTo(ctrl);
+// Wrapup
+var mapScene = new ScrollMagic.Scene({
+    triggerElement: '#thing10'
+})
+.on('start', function () {
+    showAllDistricts(42.6487, -73.76, 16);
+}).addIndicators().addTo(ctrl);
+
 
 
 

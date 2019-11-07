@@ -167,19 +167,16 @@ function showDistrict(lat, lon, zoomLevel, districtId) {
 	}
 }
 
-// function showState(lat, lon, zoomLevel, layerName) {
-// 	setPoint(lat, lon, zoomLevel) ;
-// 	// urmap.removeLayer(block_layer);
-// 	if (layerName == 'take') {
-// 		// urmap.addLayer(block_layer);
-// 		// L.geoJSON(block_layer).addTo(urmap);
-// 		districtState.addTo(urmap);
-// 	} else {
-// 		if (urmap.hasLayer(districtState)) {
-// 			// console.log(" -- got to not-take");
-// 			urmap.removeLayer(districtState);
-// 		}
-// 	}
-// }
+function showAllDistricts(lat, lon, zoomLevel) {
+	setPoint(lat, lon, zoomLevel) ;
+	// remove any other districts
+	for (let i = 0; i < districts.length; i++) {
+		// don't add to what's already there
+		if (!urmap.hasLayer(districts[i])) { 
+			districts[i].addTo(urmap);
+		}
+	}
+}
+
 
 
