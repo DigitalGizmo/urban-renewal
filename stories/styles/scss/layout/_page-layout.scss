@@ -123,6 +123,36 @@ div.full-image p {
 	}
 
 }
+
+// Video
+#video-content {
+	position: relative;
+	padding-top: 56.25%;
+
+  video {
+	position: absolute;
+
+	&.both {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	}
+
+	&.left {
+	left: 0;
+	top: 0;
+	height: 50%;
+	width: 50%;	}
+
+	&.right {
+	left: 51%;
+	top: 0;
+	height: 50%;
+	width: 50%;	}
+  }
+}
+
 //do we still need this? if so, put the class back in the markup
 .caption-panel div.last-one {
 	margin-bottom: 20em;

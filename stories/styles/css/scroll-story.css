@@ -249,8 +249,6 @@ div.full-image p {
   margin-bottom: 1.6em;
 }
 
-#mapdiv img {border: none;}
-
 .caption-panel {
   position: relative;
   z-index: 10;
@@ -285,6 +283,32 @@ div.full-image p {
 .caption-panel div p.gallery-text {
   font-size: 1em;
   font-style: normal;
+}
+
+#video-content {
+  position: relative;
+  padding-top: 56.25%;
+}
+#video-content video {
+  position: absolute;
+}
+#video-content video.both {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+#video-content video.left {
+  left: 0;
+  top: 0;
+  height: 50%;
+  width: 50%;
+}
+#video-content video.right {
+  left: 51%;
+  top: 0;
+  height: 50%;
+  width: 50%;
 }
 
 .caption-panel div.last-one {
