@@ -172,6 +172,10 @@ h3.grid-title {
   font-size: 1.25em;
 }
 
+.narrative a {
+  color: #B25900;
+}
+
 body {
   margin: 0;
 }
@@ -212,12 +216,20 @@ header.story-title {
   margin: .5em 0 2em 0;
 }
 
+div.full-image {
+  position: relative;
+}
 div.full-image p {
+  background-color: #353526;
   border: 1px solid #e4e0c7;
+  opacity: 0.75;
   float: left;
   margin-left: 1.6em;
   padding: 1.6em;
-  width: 15%;
+  position: absolute;
+  bottom: 3em;
+  width: 18%;
+  z-index: 8;
 }
 
 .narrative div img {
@@ -257,7 +269,7 @@ div.full-image p {
 
 .caption-panel div {
   background-color: #353526;
-  border: thin solid #e4e0c7;
+  border: 1px solid #e4e0c7;
   opacity: 0.75;
   margin-bottom: 90vh;
   padding: 1em;
@@ -278,7 +290,7 @@ div.full-image p {
   font-style: italic;
   font-size: 1em;
   margin-left: 30%;
-  padding-left: 2%;
+  padding-left: 1em;
 }
 .caption-panel div p.gallery-text {
   font-size: 1em;
@@ -309,6 +321,10 @@ div.full-image p {
   top: 0;
   height: 50%;
   width: 50%;
+}
+
+.sidebar {
+  padding: 1.6em;
 }
 
 .caption-panel div.last-one {

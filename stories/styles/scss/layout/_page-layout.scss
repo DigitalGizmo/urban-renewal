@@ -44,12 +44,21 @@ header.story-title {
 }
 
 // captions for static full screen images
-div.full-image p {
+div.full-image {
+	position: relative;
+
+	& p {
+	background-color: $dark-gray;
 	border: $base-border;
+	opacity: 0.75;
 	float: left;
 	margin-left: $base-spacing;
 	padding: $base-spacing;
-	width: 15%;
+	position: absolute;
+	bottom: 3em;
+	width: 18%;
+	z-index: 8;
+	}
 }
 
 .narrative div img {
@@ -91,7 +100,7 @@ div.full-image p {
 
 .caption-panel div {
 	background-color: $dark-gray;
-	border: thin solid $beige;
+	border: $base-border;
 	opacity: 0.75;
 	margin-bottom: 90vh;
 	padding: 1em;
@@ -114,14 +123,13 @@ div.full-image p {
 		font-style: italic;
 		font-size: $smallish-font-size;
 		margin-left: 30%;
-		padding-left: 2%;
+		padding-left: 1em;
 	}
 
 	p.gallery-text {
 		font-size: $smallish-font-size;
 		font-style: normal;
 	}
-
 }
 
 // Video
@@ -153,6 +161,10 @@ div.full-image p {
   }
 }
 
+// Sidebars
+.sidebar {
+	padding: $base-spacing;
+}
 //do we still need this? if so, put the class back in the markup
 .caption-panel div.last-one {
 	margin-bottom: 20em;
