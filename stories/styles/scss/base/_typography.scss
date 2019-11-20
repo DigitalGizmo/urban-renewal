@@ -86,6 +86,10 @@ h3 {
   text-transform: uppercase;  
 }
 
+.narrative p.poo {
+  position: relative;
+}
+
 .narrative p, ol li {
   font-size: $base-font-size;
 }
@@ -94,3 +98,27 @@ h3 {
   color: $accent-color;
 }
 
+// Sidebars
+.narrative p.poo .sidebar {
+
+  a {
+   background-color: #558000;
+   border-radius: 2px 2px 0 0;
+   color: $base-font-color;
+   font-size: $small-font-size;
+   padding: $tiny-spacing;
+  // Abs positioning makes it not take up vert space */
+  position: absolute;
+  bottom: 0;
+  right: -60%;
+  // Rotate from top left corner (not default) */
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
+  }
+}
+
+
+
+//.rotate {
+//  transform: rotate(-90deg);
+//}

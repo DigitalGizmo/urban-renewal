@@ -168,12 +168,29 @@ h3.grid-title {
   text-transform: uppercase;
 }
 
+.narrative p.poo {
+  position: relative;
+}
+
 .narrative p, ol li {
   font-size: 1.25em;
 }
 
 .narrative a {
   color: #B25900;
+}
+
+.narrative p.poo .sidebar a {
+  background-color: #558000;
+  border-radius: 2px 2px 0 0;
+  color: #e4e0c7;
+  font-size: 0.75em;
+  padding: 0.4em;
+  position: absolute;
+  bottom: 0;
+  right: -60%;
+  transform-origin: 0 0;
+  transform: rotate(-90deg);
 }
 
 body {
@@ -321,10 +338,6 @@ div.full-image p {
   top: 0;
   height: 50%;
   width: 50%;
-}
-
-.sidebar {
-  padding: 1.6em;
 }
 
 .caption-panel div.last-one {
