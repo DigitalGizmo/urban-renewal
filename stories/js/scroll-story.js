@@ -40,7 +40,7 @@ for (let i = 0; i < ChapTitleElems.length; i++) {
 		triggerHook: 0, // don't trigger until #pinned-trigger1 hits the top of the viewport
 	})
 	.setPin(ChapTitleElemNames[i], {pushFollowers: false})
-	.addIndicators()
+	// .addIndicators()
 	.addTo(ctrl);
 }
 
@@ -55,7 +55,7 @@ var containerScene = new ScrollMagic.Scene({
 	offset: -60 // still tucks under title bar a little
 })
 .setPin(imageSeqNames[0], {pushFollowers: false})
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 // Set pin for Image container
@@ -67,7 +67,7 @@ var containerScene = new ScrollMagic.Scene({
 	offset: -60 
 })
 .setPin(imageSeqNames[1], {pushFollowers: false})
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 
@@ -80,7 +80,7 @@ var containerScene = new ScrollMagic.Scene({
 	offset: -60 
 })
 .setPin(imageSeqNames[2], {pushFollowers: false})
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 
@@ -111,7 +111,7 @@ captionSeqElems[0].children().each(function(i) {
 		// .on('start', function() {
 		// 	console.log("-- targPrev: " + i + " target: " + (i+1));
 		// })
-		.addIndicators()
+		// .addIndicators()
 		.addTo(ctrl);
 	} // end if i > 0
 });
@@ -143,7 +143,7 @@ captionSeqElems[1].children().each(function(i) {
 		// .on('start', function() {
 		// 	console.log("-- Chap2 targPrev: " + i + " target: " + (i+1));
 		// })
-		.addIndicators()
+		// .addIndicators()
 		.addTo(ctrl);
 	} // end if i > 0
 });
@@ -173,7 +173,7 @@ captionSeqElems[2].children().each(function(i) {
 		// .on('start', function() {
 		// 	console.log("-- Chap2 targPrev: " + i + " target: " + (i+1));
 		// })
-		.addIndicators()
+		// .addIndicators()
 		.addTo(ctrl);
 	} // end if i > 0
 });
@@ -196,7 +196,7 @@ var containerScene = new ScrollMagic.Scene({
 	// Remove Sanborn
 	removeSanborn();
 })
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 
@@ -209,7 +209,7 @@ var mapScene = new ScrollMagic.Scene({
     addSanborn();
     setPoint(42.6487, -73.76, 16); // -73.763
 })
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 // Add State
@@ -220,7 +220,7 @@ var mapScene = new ScrollMagic.Scene({
     // setPoint defined in simpl-map.js
     showDistrict(42.6515, -73.760, 17, 0);
 })
-.addIndicators()
+// .addIndicators()
 .addTo(ctrl);
 
 // Show Boarding
@@ -229,7 +229,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.6505, -73.761, 17, 1);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 // Show Hudson
 var mapScene = new ScrollMagic.Scene({
@@ -237,7 +239,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.6505, -73.761, 17, 2);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 // Show Cathedral
 var mapScene = new ScrollMagic.Scene({
@@ -245,7 +249,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.648, -73.763, 17, 3);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 // Show Market
 var mapScene = new ScrollMagic.Scene({
@@ -253,7 +259,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.648, -73.757, 17, 4);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 // Show Pearl
 var mapScene = new ScrollMagic.Scene({
@@ -261,7 +269,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.6471, -73.755, 18, 5);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 // Show Gut
 var mapScene = new ScrollMagic.Scene({
@@ -269,7 +279,9 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showDistrict(42.6465, -73.755, 17, 6);
-}).addIndicators().addTo(ctrl);
+})
+// .addIndicators()
+.addTo(ctrl);
 
 
 // Wrapup
@@ -278,8 +290,7 @@ var mapScene = new ScrollMagic.Scene({
 })
 .on('start', function () {
     showAllDistricts(42.6487, -73.76, 16);
-}).addIndicators().addTo(ctrl);
-
-
-
+})
+// .addIndicators()
+.addTo(ctrl);
 
