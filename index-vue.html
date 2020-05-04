@@ -16,6 +16,8 @@
       height: 100%;
       background: url(mockups/images/overlay.png) repeat;
       z-index: 99;
+      /*needed to override hidden*/
+      display: block;
     }
 
     /* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
@@ -32,6 +34,12 @@
       left: 80px;
       width: 80%;
     }
+
+    /*slim will flash on screen when loading, unless initially hidden*/
+    .hidden {
+      display: none;
+    }
+
     
   </style>
 </head>
@@ -284,13 +292,32 @@
   	</div> <!-- end class stack_edit -->
 
     <!-- slim pop -->
-    <div v-if="mockupOn" class="lightbox" @click="closeMockup">
+    <div 
+      v-if="mockupOn"
+      @click.self="closeMockup"
+      :class="[lbClass]" 
+      > 
       <div id="slimpop-wrapper">
         <p>Picturing Urban Renewal Mockups</p>
 
         <h2>{{ mockup.title }}</h2>
-        <p><a @click="closeMockup">close (return to menu)</a> | <a href="home.html">previous mockup</a> | <a href="citystory2.html">next mockup</a></p>
-
+        <p> 
+          <a
+          v-if="prevExists"
+          href="#"
+          @click.stop.prevent="incrementMockup('prev')"
+          >previous: {{ prevShortTitle }} </a>
+          <span v-else style="color:#bbb;">Prev</span>
+          |
+          <a @click="closeMockup">close (return to menu)</a>
+          | 
+          <a
+          v-if="nextExists"
+          href="#"
+          @click.stop.prevent="incrementMockup('next')"
+          >next: {{ nextShortTitle }} </a>
+          <span v-else style="color:#bbb;">Next &#8605;</span>
+        </p>
         <img :src="'mockups/images/' + mockup.imageName + '.jpg'">
         
       </div>
