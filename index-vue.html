@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picturing Urban Renewal</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <style type="text/css" media="screen">
+    .lightbox {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(mockups/images/overlay.png) repeat;
+      z-index: 99;
+    }
+
+    /* shared styles for journal and credits popups, specific styles in FullEntry.vue and Credits.vue */
+    #slimpop-wrapper {
+      background-color: #eff0de;
+      border: 1px solid #b3aa98;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+      color: #535442;
+      display: grid;
+      padding: 1em 3em 3em 3em;
+      position: relative;
+      /*don from here on*/
+      top: 60px;
+      left: 80px;
+      width: 80%;
+    }
+    
+  </style>
+</head>
+
+<body class="stackedit">
+  <div id="app">
+  	<div class="stackedit__html">
+  		<h1 id="magic-lens-documentation">Picturing Urban Renewal</h1>
+      <p>This site provides access to mockups and other online material and links related to the NEH DPP Prototype Phase “Picturing Urban Renewal" grant application. These pages are offered to accompany the grant proposal written narrative and further information about the mockups can be found there.</p>
+
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 1133 1466.9" enable-background="new 0 0 1133 1466.9" xml:space="preserve">
+      <g id="rects">
+
+        <a v-for="(mockup, index) in mockups" 
+        :key="mockup.slug" 
+        :href="mockup.slug" 
+        @click.prevent="openMockup(index)">
+          <image :x="mockup.svgx" :y="mockup.svgy" width="96" height="96" :xlink:href="'mockups/menupics/' + mockup.imageName + '.jpg'"></image>
+        </a>
+
+      </g>
+      <g id="lines">
+        <path display="none" fill="none" stroke="#828282" stroke-miterlimit="10" stroke-dasharray="1,2,1,2,1,2" d="M4.5,147.9
+          c-68.5-2-79.6,144.6-46,174.5c46,41,390.1-30,441,1c64,39,82,169,2,229c-73.6,55.2-384-33-452,19c-30,23-30,166,16,173
+          c155.4,23.6,414-48,415,25c1.3,97.7-423.8,14-428,101c-4,82,392.6,22.6,435,55c68,52-46.8,325.4,112,406c67,34,600,59,655-39
+          s93.2-1028.2-17-1101c-115-76-349.9-72.9-433,9c-69,68-85.1,190.9-22,274c38,50,423-50,430,43s-436.9-10-436,75
+          c1,96,440.9-20.1,440,48c-2,157-396,58-426,99c-30.3,41.4-33.1,77.8-5,162c17,51,363.2,7.4,363.2,7.4"/>
+        <g>
+          <g>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="100" y1="404.4" x2="103" y2="404.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="6.2736,6.2736,6.2736,6.2736" x1="109.3" y1="404.4" x2="131.2" y2="404.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="6.2736,6.2736,6.2736,6.2736,6.2736,6.2736" x1="134.4" y1="404.4" x2="432.4" y2="404.4"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="435.5,404.4 438.5,404.4 438.5,401.4       "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6604,5.6604,5.6604,5.6604" x1="438.5" y1="395.8" x2="438.5" y2="375.9"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6604,5.6604,5.6604,5.6604,5.6604,5.6604" x1="438.5" y1="373.1" x2="438.5" y2="104.2"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="438.5,101.4 438.5,98.4 441.5,98.4       "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4.765,4.765,4.765,4.765" x1="446.3" y1="98.4" x2="462.9" y2="98.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="4.765,4.765,4.765,4.765,4.765,4.765" x1="465.3" y1="98.4" x2="491.5" y2="98.4"/>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="493.9" y1="98.4" x2="496.9" y2="98.4"/>
+            <g>
+              <polygon points="493.6,102.5 492.9,101.8 496.5,98.4 492.9,95.1 493.6,94.3 498,98.4        "/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="637" y1="783.4" x2="640" y2="783.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6818,5.6818,5.6818,5.6818" x1="645.7" y1="783.4" x2="665.6" y2="783.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6818,5.6818,5.6818,5.6818,5.6818,5.6818" x1="668.4" y1="783.4" x2="699.7" y2="783.4"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="702.5,783.4 705.5,783.4 705.5,786.4       "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.1176,5.1176,5.1176,5.1176" x1="705.5" y1="791.5" x2="705.5" y2="809.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.1176,5.1176,5.1176,5.1176,5.1176,5.1176" x1="705.5" y1="812" x2="705.5" y2="870.9"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="705.5,873.4 705.5,876.4 708.5,876.4       "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.9109,5.9109,5.9109,5.9109" x1="714.4" y1="876.4" x2="735.1" y2="876.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.9109,5.9109,5.9109,5.9109,5.9109,5.9109" x1="738.1" y1="876.4" x2="877" y2="876.4"/>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="879.9" y1="876.4" x2="882.9" y2="876.4"/>
+            <g>
+              <polygon points="879.6,880.5 878.9,879.8 882.5,876.4 878.9,873.1 879.6,872.3 884,876.4        "/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="6,6,6,6,6,6" x1="495" y1="783.4" x2="369.1" y2="783.4"/>
+            <g>
+              <polygon points="372.4,779.3 373.1,780.1 369.5,783.4 373.1,786.8 372.4,787.5 368,783.4        "/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="6,6,6,6,6,6" points="737.9,374.4 705.5,374.4 
+              705.5,681.4 637,681.5       "/>
+            <g>
+              <polygon points="734.6,370.3 733.9,371.1 737.5,374.4 733.9,377.8 734.6,378.5 739,374.4        "/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <g>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="637" y1="984.4" x2="640" y2="984.5"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6825,5.6825,5.6825,5.6825" x1="645.7" y1="984.5" x2="665.6" y2="984.8"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.6825,5.6825,5.6825,5.6825,5.6825,5.6825" x1="668.4" y1="984.9" x2="699.7" y2="985.3"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="702.5,985.4 705.5,985.4 705.5,988.4       "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.7288,5.7288,5.7288,5.7288" x1="705.5" y1="994.1" x2="705.5" y2="1014.2"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.7288,5.7288,5.7288,5.7288,5.7288,5.7288" x1="705.5" y1="1017.1" x2="705.5" y2="1323.5"/>
+            <polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="705.5,1326.4 705.5,1329.4 708.5,1329.4      "/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.9454,5.9454,5.9454,5.9454" x1="714.4" y1="1329.4" x2="735.3" y2="1329.4"/>
+            
+              <line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="5.9454,5.9454,5.9454,5.9454,5.9454,5.9454" x1="738.2" y1="1329.4" x2="877.9" y2="1329.4"/>
+            <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="880.9" y1="1329.4" x2="883.9" y2="1329.4"/>
+            <g>
+              <polygon points="880.6,1333.5 879.9,1332.8 883.5,1329.4 879.9,1326.1 880.6,1325.3 885,1329.4        "/>
+            </g>
+          </g>
+        </g>
+        <a xlink:href="stories/albany-displaced.html" >
+          
+            <rect id="story-link" x="168.5" y="386.4" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="6,6,6,6,6,6" width="190" height="31"/>
+        </a>
+      </g>
+      <g id="text">
+        <text transform="matrix(1 0 0 1 480.4004 59.5889)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">Albany: Lost Places, Displaced People</tspan><tspan x="13.4" y="14" font-family="'FontinSans-Italic'" font-size="12px">The Reaction to Redevelopment</tspan></text>
+        <g>
+          <text transform="matrix(1 0 0 1 479.79 29.3481)" font-family="'FontinSans-Bold'" font-size="18px">City/Theme Scroll Story</text>
+        </g>
+        <text transform="matrix(1 0 0 1 898.1382 870.1675)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">South Pearl St.</tspan><tspan x="-8.4" y="14" font-family="'FontinSans-Italic'" font-size="12px">Shopping District </tspan></text>
+
+        <text transform="matrix(1 0 0 1 100 380)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">Reaction to Redevelopment</tspan></text>
+
+        <text transform="matrix(1 0 0 1 295.6422 781.5813)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">Hunter’s</tspan><tspan x="-1.6" y="14" font-family="'FontinSans-Italic'" font-size="12px">Pharmacy</tspan></text>
+        <text transform="matrix(1 0 0 1 752.0264 371.9218)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">Albany’s Lost</tspan><tspan x="-5.6" y="14" font-family="'FontinSans-Italic'" font-size="12px">Neighborhoods</tspan></text>
+        <rect x="872.9" y="1313.9" fill="none" width="120" height="50"/>
+        <text transform="matrix(1 0 0 1 888.5714 1323.8612)"><tspan x="0" y="0" font-family="'FontinSans-Italic'" font-size="12px">Albany’s Rooming </tspan><tspan x="1.6" y="14" font-family="'FontinSans-Italic'" font-size="12px">Houses and SROs</tspan></text>
+        <g>
+          <text transform="matrix(1 0 0 1 210.7005 405.8017)" font-family="'FontinSans-Regular'" font-size="12px">Link to scroll story</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.402 1276.1191)" font-family="'FontinSans-Regular'" font-size="12px">23. Theme Narrative</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.4021 1146.9512)" font-family="'FontinSans-Regular'" font-size="12px">22. Menu</text>
+        </g>
+        <text transform="matrix(1 0 0 1 885.4024 1114.7584)" font-family="'FontinSans-Bold'" font-size="18px">Themes &amp; Essays</text>
+        <g>
+          <text transform="matrix(1 0 0 1 1037.1182 947.0836)" font-family="'FontinSans-Regular'" font-size="12px">21. Event Popup</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 1037.1182 824.9156)" font-family="'FontinSans-Regular'" font-size="12px">20. Timeline</text>
+        </g>
+        <text transform="matrix(1 0 0 1 1037.1185 788.7229)" font-family="'FontinSans-Bold'" font-size="18px">Timeline</text>
+        <g>
+          <text transform="matrix(1 0 0 1 885.5 826.4644)" font-family="'FontinSans-Regular'" font-size="12px">19. Item Detail</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.5 702.9644)" font-family="'FontinSans-Regular'" font-size="12px">18. Filter Results</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.5 575.9902)" font-family="'FontinSans-Regular'" font-size="12px">17. Filter Selections</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.4999 451.1191)" font-family="'FontinSans-Regular'" font-size="12px">16. Filters Menu</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.4999 326.1191)" font-family="'FontinSans-Regular'" font-size="12px"> 15. Default View</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 885.5 293.3481)" font-family="'FontinSans-Bold'" font-size="18px">The Visual Record</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 738.4626 326.1191)" font-family="'FontinSans-Regular'" font-size="12px">X. Albany Map</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 738.4628 201.9902)" font-family="'FontinSans-Regular'" font-size="12px">14. Map Menu</text>
+        </g>
+        <text transform="matrix(1 0 0 1 738.4631 173.7974)" font-family="'FontinSans-Bold'" font-size="18px">Interactive Maps</text>
+        <g>
+          <text transform="matrix(1 0 0 1 271 1364.3481)" font-family="'FontinSans-Regular'" font-size="12px">13. Full Story</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 270.9998 1238.6818)" font-family="'FontinSans-Regular'" font-size="12px">12. Brief Story</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 270.9998 1113.0145)" font-family="'FontinSans-Regular'" font-size="12px">11. City Menu Tooltip</text>
+        </g>
+        <text transform="matrix(1 0 0 1 271 986.3473)" font-family="'FontinSans-Regular'" font-size="12px">10. Albany Menu</text>
+        <g>
+          <text transform="matrix(1 0 0 1 271 859.6809)" font-family="'FontinSans-Regular'" font-size="12px">9. City Menu</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 271 734.0145)" font-family="'FontinSans-Regular'" font-size="12px">8. Story page</text>
+        </g>
+        <text transform="matrix(1 0 0 1 271 606.3481)" font-family="'FontinSans-Regular'" font-size="12px">7. Topic Menu</text>
+        <text transform="matrix(1 0 0 1 270.9998 574.9183)" font-family="'FontinSans-Bold'" font-size="18px">Personal Stories</text>
+        <g>
+          <text transform="matrix(1 0 0 1 135.4626 607.1191)" font-family="'FontinSans-Regular'" font-size="12px">6. Stuy Town video</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 135.5827 479.1191)" font-family="'FontinSans-Regular'" font-size="12px">X. City Menu</text>
+        </g>
+        <text transform="matrix(1 0 0 1 135.4626 451.5539)" font-family="'FontinSans-Bold'" font-size="18px">Sights &amp; Sounds</text>
+        <g>
+          <text transform="matrix(1 0 0 1 0 606.9644)" font-family="'FontinSans-Regular'" font-size="12px">5. Theme Intro</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 -7.629395e-05 480.2259)" font-family="'FontinSans-Regular'" font-size="12px">4. City Intro</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 0 353.0952)" font-family="'FontinSans-Regular'" font-size="12px">3. City/Story Tooltip</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 0 225.9644)" font-family="'FontinSans-Regular'" font-size="12px">2. City/Story Menu</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 0 192.8936)" font-family="'FontinSans-Bold'" font-size="18px">4 Cities / 4 Stories</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 0 40.8481)" font-family="'FontinSans-Regular'" font-size="12px">1. Home page</text>
+        </g>
+        <g>
+          <text transform="matrix(1 0 0 1 2.441406e-04 14.9218)" font-family="'FontinSans-Bold'" font-size="18px">Home</text>
+        </g>
+      </g>
+      <g id="picture">  
+          <image overflow="visible" width="150" height="1436" xlink:href="mockups/menupics/scroll-story.jpg"  x="499" y="86">
+        </image>
+        
+      </g>
+      </svg>
+   
+  		<h2>City Story</h2>
+  		<ul>
+  			<li><a href="stories/albany-displaced.html">Albany Lost Places/Displaced People</a></li>
+  		</ul>
+
+  		<h2>Mockups</h2>
+      <ol id="example-1">
+        <li v-for="(mockup, index) in mockups" :key="mockup.slug">
+          <a :href="mockup.slug" @click.prevent="openMockup(index)">
+          {{ mockup.title }}</a>
+        </li>
+      </ol>
+
+  		<h2>Then &amp; Now Prototypes</h2>
+  		<ul>
+  			<li>
+  				<a href="then-now/index.html">Menu</a>
+  			</li>
+  		</ul>
+
+  	</div> <!-- end class stack_edit -->
+
+    <!-- slim pop -->
+    <div v-if="mockupOn" class="lightbox" @click="closeMockup">
+      <div id="slimpop-wrapper">
+        <p>Picturing Urban Renewal Mockups</p>
+
+        <h2>{{ mockup.title }}</h2>
+        <p><a @click="closeMockup">close (return to menu)</a> | <a href="home.html">previous mockup</a> | <a href="citystory2.html">next mockup</a></p>
+
+        <img :src="'mockups/images/' + mockup.imageName + '.jpg'">
+        
+      </div>
+      
+    </div>
+  </div> <!-- end app div -->
+  <script src="mockups/js/mockup.js" type="text/javascript"></script>
+
+</body>
+
+</html>

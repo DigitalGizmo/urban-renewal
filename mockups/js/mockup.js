@@ -1,0 +1,218 @@
+// Vue app
+
+var mapApp = new Vue({
+  el: '#app',
+  data: { 
+    mockupOn : false,
+    mockups: [
+     {
+       "slug": "home",
+       "svgy": 49,
+       "svgx": 0,
+       "title": "Home Page",
+       "imageName": "01-home"
+     },
+     {
+       "slug": "citystory1",
+       "svgy": 235,
+       "svgx": 0,
+       "title": "4 Cities / 4 Stories Menu - Default View",
+       "imageName": "02-citystory-default"
+     },
+     {
+       "slug": "citystory2",
+       "svgy": 362,
+       "svgx": 0,
+       "title": "4 Cities / 4 Stories - City Story Tooltip (Reaction to Redevelopment)",
+       "imageName": "03-citystory-citytheme-hover"
+     },
+     {
+       "slug": "citystory3",
+       "svgy": 488,
+       "svgx": 0,
+       "title": "4 Cities / 4 Stories - City Intro",
+       "imageName": "04-citystory-city-intro"
+     },
+     {
+       "slug": "citystory4",
+       "svgy": 614,
+       "svgx": 0,
+       "title": "4 Cities / 4 Stories - Theme Intro",
+       "imageName": "05-citystory-theme-intro"
+     },
+     {
+       "slug": "sights-soundsx",
+       "svgy": 488,
+       "svgx": 135,
+       "title": "[Sights & Sounds - City Menu]",
+       "imageName": "06-sights-menu"
+     },
+     {
+       "slug": "sights-sounds",
+       "svgy": 614,
+       "svgx": 135,
+       "title": "[Sights & Sounds - Sample Video]",
+       "imageName": "06-sights-video"
+     },
+     {
+       "slug": "personal1",
+       "svgy": 614,
+       "svgx": 271,
+       "title": "Personal Stories - Topic Menu",
+       "imageName": "07-personal-stories-topics"
+     },
+     {
+       "slug": "personal2",
+       "svgy": 741,
+       "svgx": 271,
+       "title": "Personal Stories - Story Page (Hunter&apos;s Pharmacy)",
+       "imageName": "08-personal-stories-hunters"
+     },
+     {
+       "slug": "personal3",
+       "svgy": 867,
+       "svgx": 271,
+       "title": "Personal Stories - City Menu",
+       "imageName": "09-personal-stories-city-menu"
+     },
+     {
+       "slug": "personal4",
+       "svgy": 994,
+       "svgx": 271,
+       "title": "Personal Stories - Albany Menu",
+       "imageName": "10-personal-stories-albany-menu"
+     },
+     {
+       "slug": "personal5",
+       "svgy": 1120,
+       "svgx": 271,
+       "title": "Personal Stories - City Menu ToolTip",
+       "imageName": "11-personal-stories-albany-popup"
+     },
+     {
+       "slug": "personal6",
+       "svgy": 1245,
+       "svgx": 271,
+       "title": "Personal Stories - Brief Story",
+       "imageName": "12-personal-stories-short-story"
+     },
+     {
+       "slug": "personal7",
+       "svgy": 1371,
+       "svgx": 271,
+       "title": "Personal Stories - Full Story",
+       "imageName": "13-personal-stories-long-story"
+     },
+     {
+       "slug": "map1",
+       "svgy": 211,
+       "svgx": 738,
+       "title": "[Interactive Map] - Map Menu",
+       "imageName": "14- map-menu"
+     },
+     {
+       "slug": "map2",
+       "svgy": 332,
+       "svgx": 738,
+       "title": "[Interactive Map] (Albany&apos;s Lost Neighborhoods)",
+       "imageName": "14-map-neighborhood"
+     },
+     {
+       "slug": "visuals1",
+       "svgy": 332,
+       "svgx": 886,
+       "title": "The Visual Record - Default View",
+       "imageName": "15-visuals-default"
+     },
+     {
+       "slug": "visuals2",
+       "svgy": 458,
+       "svgx": 886,
+       "title": "The Visual Record - Filters",
+       "imageName": "16-visuals-filters"
+     },
+     {
+       "slug": "visuals3",
+       "svgy": 583,
+       "svgx": 886,
+       "title": "The Visual Record - Filter Selections",
+       "imageName": "17-visuals-filter-selections"
+     },
+     {
+       "slug": "visuals4",
+       "svgy": 710,
+       "svgx": 886,
+       "title": "The Visual Record - Filter Results",
+       "imageName": "18-visuals-filter-results"
+     },
+     {
+       "slug": "visuals5",
+       "svgy": 833,
+       "svgx": 886,
+       "title": "The Visual Record - Item Detail (South Pearl St. Shopping District)",
+       "imageName": "19-visuals-item"
+     },
+     {
+       "slug": "timeline1",
+       "svgy": 832,
+       "svgx": 1037,
+       "title": "Timeline - Default View",
+       "imageName": "20-timeline-default"
+     },
+     {
+       "slug": "timeline2",
+       "svgy": 953,
+       "svgx": 1037,
+       "title": "Timeline - Event Popup",
+       "imageName": "21-timeline-event-popup"
+     },
+     {
+       "slug": "theme1",
+       "svgy": 1154,
+       "svgx": 885,
+       "title": "[Themes & Essays - Menu]",
+       "imageName": "22-theme-menu"
+     },
+     {
+       "slug": "theme2",
+       "svgy": 1283,
+       "svgx": 885,
+       "title": "[Themes & Essays - Theme Narrative] (Albany&apos;s Rooming Houses & SROs)",
+       "imageName": "22-theme-narrative"
+     }
+    ],    // mockups: {
+    //   "home": {"title":"Home Page","imageName":"01-home"},
+    //   "citystory1": 
+    //     {"title":"City/Story Menu","imageName":"02-citystory-default"}
+    // },
+    mockup: null
+  },
+  created() {
+    // From: https://stackoverflow.com/questions/35914069/
+    //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
+    let uri = window.location.href.split('?');
+    if (uri.length == 2) {
+      let vars = uri[1].split('&');
+      let getVars = {};
+      let tmp = '';
+      vars.forEach(function(v){
+        tmp = v.split('=');
+        if(tmp.length == 2)
+        getVars[tmp[0]] = tmp[1];
+      });
+      console.log(getVars);
+      // do 
+      this.msg = getVars.test
+    }
+  },
+  methods: {
+    openMockup: function (mockIndex) {
+    // openMockup: function (slug) {
+      this.mockup = this.mockups[mockIndex]
+      this.mockupOn = true
+    },
+    closeMockup: function () {
+        this.mockupOn = false
+    }
+  }
+});
