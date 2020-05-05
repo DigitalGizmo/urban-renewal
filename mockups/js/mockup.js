@@ -224,26 +224,26 @@ var mapApp = new Vue({
     // // run after everything is in-place
     // window.addEventListener('load', () => {
 
-      // From: https://stackoverflow.com/questions/35914069/
-      //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
-      let uri = window.location.href.split('?');
-      if (uri.length == 2) {
-        let vars = uri[1].split('&');
-        let getVars = {};
-        let tmp = '';
-        vars.forEach(function(v){
-          tmp = v.split('=');
-          if(tmp.length == 2)
-          getVars[tmp[0]] = tmp[1];
-        });
-        console.log(getVars);
-        // do 
-        this.mIndex = getVars.mindex
-        // If mindex sent, open slimpop
-        if (this.mIndex > -1) {
-          this.openMockup(this.mIndex)
-        }
+    // From: https://stackoverflow.com/questions/35914069/
+    //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
+    let uri = window.location.href.split('?');
+    if (uri.length == 2) {
+      let vars = uri[1].split('&');
+      let getVars = {};
+      let tmp = '';
+      vars.forEach(function(v){
+        tmp = v.split('=');
+        if(tmp.length == 2)
+        getVars[tmp[0]] = tmp[1];
+      });
+      console.log(getVars);
+      // convert string number to index 
+      this.mIndex = (Number(getVars.mocknum) - 1)
+      // If mindex sent, open slimpop
+      if (this.mIndex > -1) {
+        this.openMockup(this.mIndex)
       }
+    }
     // })
 
   },
