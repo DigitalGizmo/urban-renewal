@@ -79,7 +79,7 @@ var mapApp = new Vue({
        "slug": "personal2",
        "svgy": 741,
        "svgx": 271,
-       "title": "Personal Stories - Story Page (Hunter&apos;s Pharmacy)",
+       "title": "Personal Stories - Story Page (Hunter's Pharmacy)",
        "imageName": "08-personal-stories-hunters",
        "shortTitle": "Story Page"
      },
@@ -135,7 +135,7 @@ var mapApp = new Vue({
        "slug": "map2",
        "svgy": 332,
        "svgx": 738,
-       "title": "[Interactive Map] (Albany&apos;s Lost Neighborhoods)",
+       "title": "[Interactive Map] (Albany's Lost Places)",
        "imageName": "14-map-neighborhood",
        "shortTitle": "Albany Map"
      },
@@ -207,7 +207,7 @@ var mapApp = new Vue({
        "slug": "theme2",
        "svgy": 1283,
        "svgx": 885,
-       "title": "[Themes & Essays - Theme Narrative] (Albany&apos;s Rooming Houses & SROs)",
+       "title": "[Themes & Essays - Theme Narrative] (Albany's Rooming Houses & SROs)",
        "imageName": "22-theme-narrative",
        "shortTitle": "Theme Narrative"
      }
