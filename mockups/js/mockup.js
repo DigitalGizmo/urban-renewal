@@ -218,27 +218,34 @@ var mapApp = new Vue({
     // },
     mockup: null
   },
-  created() {
-    // From: https://stackoverflow.com/questions/35914069/
-    //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
-    let uri = window.location.href.split('?');
-    if (uri.length == 2) {
-      let vars = uri[1].split('&');
-      let getVars = {};
-      let tmp = '';
-      vars.forEach(function(v){
-        tmp = v.split('=');
-        if(tmp.length == 2)
-        getVars[tmp[0]] = tmp[1];
-      });
-      console.log(getVars);
-      // do 
-      this.mIndex = getVars.mindex
-      // If mindex sent, open slimpop
-      if (this.mIndex > -1) {
-        this.openMockup(this.mIndex)
+  // created() {
+  mounted() {
+
+    // // run after everything is in-place
+    // window.addEventListener('load', () => {
+
+      // From: https://stackoverflow.com/questions/35914069/
+      //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
+      let uri = window.location.href.split('?');
+      if (uri.length == 2) {
+        let vars = uri[1].split('&');
+        let getVars = {};
+        let tmp = '';
+        vars.forEach(function(v){
+          tmp = v.split('=');
+          if(tmp.length == 2)
+          getVars[tmp[0]] = tmp[1];
+        });
+        console.log(getVars);
+        // do 
+        this.mIndex = getVars.mindex
+        // If mindex sent, open slimpop
+        if (this.mIndex > -1) {
+          this.openMockup(this.mIndex)
+        }
       }
-    }
+    // })
+
   },
   methods: {
     incrementMockup: function (nextOrPrev) {
@@ -255,8 +262,9 @@ var mapApp = new Vue({
       if (this.lbClass === 'hidden') {
         this.lbClass = 'lightbox'
       }
-      this.currIndex = mockIndex
-      // console.log(' currIndex: ' + this.currIndex)
+      // When mockIndex comes from a parameter it will be a string
+      this.currIndex = Number(mockIndex)
+      // console.log(' currIndex + 1: ' + (this.currIndex + 1))
       this.mockup = this.mockups[this.currIndex]
       if (this.mockupOn === false) {
         this.mockupOn = true
