@@ -9,6 +9,7 @@ var mapApp = new Vue({
     currIndex: 0, 
     nextShortTitle: 'not yet set',
     prevShortTitle: 'not yet set',
+    mIndex: -1,
     mockups: [
      {
        "slug": "home",
@@ -232,7 +233,11 @@ var mapApp = new Vue({
       });
       console.log(getVars);
       // do 
-      this.msg = getVars.test
+      this.mIndex = getVars.mindex
+      // If mindex sent, open slimpop
+      if (this.mIndex > -1) {
+        this.openMockup(this.mIndex)
+      }
     }
   },
   methods: {
@@ -276,7 +281,7 @@ var mapApp = new Vue({
       }
     },
     prevExists () {
-      if (this.currIndex > 1) {
+      if (this.currIndex > 0) {
         return true
       } else {
         return false
