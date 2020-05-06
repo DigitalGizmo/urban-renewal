@@ -17,7 +17,7 @@
   <div id="app">
   	<div class="menu-page">
   		<h1 id="magic-lens-documentation">Picturing Urban Renewal</h1>
-      <p>This site provides access to mockups and other draft online material and links related to the NEH Digital Projects for the Public Prototype Phase “Picturing Urban Renewal" grant application. These pages are offered to accompany the written grant proposal and further information about the mockups can be found there.</p>
+      <p>This site provides access to mockups and other draft online material and links related to the NEH Digital Projects for the Public Prototype Phase “Picturing Urban Renewal" grant application. These pages are offered to accompany the written grant proposal and further information about the mockups can be found there. (Modern browser required -- e.g. not IE 11)</p>
 
       <!-- graphic menu --> 
       <svg class="graphic-menu" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -208,27 +208,6 @@
         </a>
       </g>
       </svg>
-
-      <!-- text menu -->   
-  		<h2>City Story</h2>
-  		<ul>
-  			<li><a href="stories/albany-displaced.html">Albany Lost Places/Displaced People</a></li>
-  		</ul>
-
-  		<h2>Mockups</h2>
-      <ol id="example-1">
-        <li v-for="(mockup, index) in mockups" :key="mockup.slug">
-          <a :href="mockup.slug" @click.prevent="openMockup(index)">
-          {{ mockup.title }}</a>
-        </li>
-      </ol>
-
-  		<h2>Then &amp; Now Prototypes</h2>
-  		<ul>
-  			<li>
-  				<a href="then-now/index.html">Menu</a>
-  			</li>
-  		</ul>
 
   	</div> <!-- /menu-page -->
 

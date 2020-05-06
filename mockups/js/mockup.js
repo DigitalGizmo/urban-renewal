@@ -128,7 +128,7 @@ var mapApp = new Vue({
        "svgy": 211,
        "svgx": 738,
        "title": "[Interactive Map] - Map Menu",
-       "imageName": "14- map-menu",
+       "imageName": "14-map-menu",
        "shortTitle": "Map Menu"
      },
      {

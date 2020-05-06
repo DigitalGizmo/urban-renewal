@@ -10,6 +10,7 @@
 .DS_Store
 robots.txt
 # directories
+media/
 stories/images/
 stories/media/
 **/.sass-cache
