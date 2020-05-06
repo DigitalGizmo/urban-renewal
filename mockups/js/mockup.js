@@ -23,7 +23,7 @@ var mapApp = new Vue({
        "slug": "citystory1",
        "svgy": 235,
        "svgx": 0,
-       "title": "4 Cities / 4 Stories Menu - Default View",
+       "title": "4 Cities/4 Stories Menu",
        "imageName": "02-citystory-default",
        "shortTitle": "City/Story Menu"
      },
@@ -31,7 +31,7 @@ var mapApp = new Vue({
        "slug": "citystory2",
        "svgy": 362,
        "svgx": 0,
-       "title": "4 Cities / 4 Stories - City Story Tooltip (Reaction to Redevelopment)",
+       "title": "4 Cities/4 Stories - City Story Tooltip",
        "imageName": "03-citystory-citytheme-hover",
        "shortTitle": "City/Story Tooltip"
      },
@@ -39,7 +39,7 @@ var mapApp = new Vue({
        "slug": "citystory3",
        "svgy": 488,
        "svgx": 0,
-       "title": "4 Cities / 4 Stories - City Intro",
+       "title": "4 Cities/4 Stories - City Intro",
        "imageName": "04-citystory-city-intro",
        "shortTitle": "City Intro"
      },
@@ -47,7 +47,7 @@ var mapApp = new Vue({
        "slug": "citystory4",
        "svgy": 614,
        "svgx": 0,
-       "title": "4 Cities / 4 Stories - Theme Intro",
+       "title": "4 Cities/4 Stories - Theme Intro",
        "imageName": "05-citystory-theme-intro",
        "shortTitle": "Theme Intro"
      },
@@ -55,17 +55,17 @@ var mapApp = new Vue({
        "slug": "sights-soundsx",
        "svgy": 488,
        "svgx": 135,
-       "title": "[Sights & Sounds - City Menu]",
+       "title": "Sights & Sounds - Menu",
        "imageName": "06-sights-menu",
-       "shortTitle": "City Menu"
+       "shortTitle": "Sights & Sounds Menu"
      },
      {
        "slug": "sights-sounds",
        "svgy": 614,
        "svgx": 135,
-       "title": "[Sights & Sounds - Sample Video]",
+       "title": "Sights & Sounds - Video",
        "imageName": "06-sights-video",
-       "shortTitle": "Stuy Town Video"
+       "shortTitle": "Sights & Sounds Video"
      },
      {
        "slug": "personal1",
@@ -79,7 +79,7 @@ var mapApp = new Vue({
        "slug": "personal2",
        "svgy": 741,
        "svgx": 271,
-       "title": "Personal Stories - Story Page (Hunter's Pharmacy)",
+       "title": "Personal Stories - Story Page",
        "imageName": "08-personal-stories-hunters",
        "shortTitle": "Story Page"
      },
@@ -127,7 +127,7 @@ var mapApp = new Vue({
        "slug": "map1",
        "svgy": 211,
        "svgx": 738,
-       "title": "[Interactive Map] - Map Menu",
+       "title": "Interactive Map - Menu",
        "imageName": "14-map-menu",
        "shortTitle": "Map Menu"
      },
@@ -135,7 +135,7 @@ var mapApp = new Vue({
        "slug": "map2",
        "svgy": 332,
        "svgx": 738,
-       "title": "[Interactive Map] (Albany's Lost Places)",
+       "title": "Interactive Map - Albany",
        "imageName": "14-map-neighborhood",
        "shortTitle": "Albany Map"
      },
@@ -145,7 +145,7 @@ var mapApp = new Vue({
        "svgx": 886,
        "title": "The Visual Record - Default View",
        "imageName": "15-visuals-default",
-       "shortTitle": "Default View"
+       "shortTitle": "Visual Record"
      },
      {
        "slug": "visuals2",
@@ -153,7 +153,7 @@ var mapApp = new Vue({
        "svgx": 886,
        "title": "The Visual Record - Filters",
        "imageName": "16-visuals-filters",
-       "shortTitle": "Filters Menu"
+       "shortTitle": "Filters"
      },
      {
        "slug": "visuals3",
@@ -175,7 +175,7 @@ var mapApp = new Vue({
        "slug": "visuals5",
        "svgy": 833,
        "svgx": 886,
-       "title": "The Visual Record - Item Detail (South Pearl St. Shopping District)",
+       "title": "The Visual Record - Item Detail",
        "imageName": "19-visuals-item",
        "shortTitle": "Item Detail"
      },
@@ -183,7 +183,7 @@ var mapApp = new Vue({
        "slug": "timeline1",
        "svgy": 832,
        "svgx": 1037,
-       "title": "Timeline - Default View",
+       "title": "Timeline",
        "imageName": "20-timeline-default",
        "shortTitle": "Timeline"
      },
@@ -193,13 +193,13 @@ var mapApp = new Vue({
        "svgx": 1037,
        "title": "Timeline - Event Popup",
        "imageName": "21-timeline-event-popup",
-       "shortTitle": "Event Page"
+       "shortTitle": "Timeline Event"
      },
      {
        "slug": "theme1",
        "svgy": 1154,
        "svgx": 885,
-       "title": "[Themes & Essays - Menu]",
+       "title": "Themes & Essays - Menu",
        "imageName": "22-theme-menu",
        "shortTitle": "Theme Menu"
      },
@@ -207,7 +207,7 @@ var mapApp = new Vue({
        "slug": "theme2",
        "svgy": 1283,
        "svgx": 885,
-       "title": "[Themes & Essays - Theme Narrative] (Albany's Rooming Houses & SROs)",
+       "title": "Themes & Essays - Theme Narrative",
        "imageName": "22-theme-narrative",
        "shortTitle": "Theme Narrative"
      }

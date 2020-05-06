@@ -132,6 +132,11 @@ div.full-image {
 	}
 }
 
+a.caption-link  {
+	color: $accent-color;
+	text-decoration: underline;
+}
+
 // Video
 #video-content {
 	position: relative;

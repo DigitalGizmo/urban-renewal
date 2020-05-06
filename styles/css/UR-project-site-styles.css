@@ -105,13 +105,18 @@ h5,
 h6 {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.2;
   margin: 0 0 0.8em 0;
 }
 
 h1 {
   font-size: 1.75em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+h5 {
   margin-bottom: 0;
 }
 
@@ -164,6 +169,7 @@ blockquote {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
   color: #333;
   padding: 1em 3em 3em 3em;
+  position: relative;
   margin: 1.6em auto;
   max-width: 65%;
   max-height: 85%;
@@ -173,6 +179,17 @@ blockquote {
 /* this class is used in the js so that slim won't flash on screen when loading */
 .hidden {
   display: none;
+}
+
+nav {
+  text-align: right;
+  font-size: 0.9em;
+}
+
+.close {
+  position: absolute;
+  top: 0.8em;
+  right: 1.6em;
 }
 
 #rects a image {

@@ -204,7 +204,7 @@
       </g>
       <g id="picture">  
         <a xlink:href="stories/albany-displaced.html" >
-          <image overflow="visible" width="150" height="1436" xlink:href="mockups/menupics/scroll-story.jpg"  x="499" y="86"></image>
+          <image overflow="visible" width="150" height="1203" xlink:href="mockups/menupics/scroll-story.jpg"  x="499" y="86"></image>
         </a>
       </g>
       </svg>
@@ -218,26 +218,30 @@
       :class="[lbClass]" 
       > 
       <div id="slimpop-wrapper">
-        <p>Picturing Urban Renewal Mockups</p>
+        <h5>Picturing Urban Renewal Mockups</h5>
 
         <h1>{{ mockup.title }}</h1>
-        <p> 
+        
+        <a @click="closeMockup" class="close">X</a>
+
+        <nav> 
           <a
           v-if="prevExists"
           href="#"
           @click.stop.prevent="incrementMockup('prev')"
-          >previous: {{ prevShortTitle }} </a>
+          >&larr; Prev: {{ prevShortTitle }}</a>
           <span v-else class="disabled">Prev</span>
+          
           |
-          <a @click="closeMockup">close (return to menu)</a>
-          | 
+          
           <a
           v-if="nextExists"
           href="#"
           @click.stop.prevent="incrementMockup('next')"
-          >next: {{ nextShortTitle }} </a>
+          >Next: {{ nextShortTitle }} &rarr;</a>
           <span v-else class="disabled">Next</span>
-        </p>
+        </nav>
+
         <img :src="'mockups/images/' + mockup.imageName + '.jpg'">
         
       </div>

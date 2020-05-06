@@ -314,6 +314,11 @@ div.full-image p {
   font-style: normal;
 }
 
+a.caption-link {
+  color: #B25900;
+  text-decoration: underline;
+}
+
 #video-content {
   position: relative;
   padding-top: 56.25%;
