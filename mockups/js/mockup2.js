@@ -77,7 +77,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "personal2",
-       "svgy": 741,
+       "svgy": 742,
        "svgx": 297,
        "title": "Personal Stories - Story Page",
        "imageName": "08-personal-stories-hunters",
@@ -85,7 +85,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "personal3",
-       "svgy": 867,
+       "svgy": 869,
        "svgx": 297,
        "title": "Personal Stories - City Menu",
        "imageName": "09-personal-stories-city-menu",
@@ -93,7 +93,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "personal4",
-       "svgy": 994,
+       "svgy": 996,
        "svgx": 297,
        "title": "Personal Stories - Albany Menu",
        "imageName": "10-personal-stories-albany-menu",
@@ -101,7 +101,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "personal5",
-       "svgy": 1120,
+       "svgy": 1123,
        "svgx": 297,
        "title": "Personal Stories - City Menu ToolTip",
        "imageName": "11-personal-stories-albany-popup",
@@ -109,7 +109,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "map1",
-       "svgy": 874,
+       "svgy": 869,
        "svgx": 440,
        "title": "Interactive Map - Menu",
        "imageName": "14-map-menu",
@@ -117,7 +117,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "map2",
-       "svgy": 1006,
+       "svgy": 996,
        "svgx": 440,
        "title": "Interactive Map - Albany",
        "imageName": "14-map-neighborhood",
@@ -125,7 +125,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "theme1",
-       "svgy": 490,
+       "svgy": 488,
        "svgx": 862,
        "title": "Themes & Essays - Menu",
        "imageName": "22-theme-menu",
@@ -133,7 +133,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "theme2",
-       "svgy": 622,
+       "svgy": 614,
        "svgx": 862,
        "title": "Themes & Essays - Theme Narrative",
        "imageName": "22-theme-narrative",
@@ -141,7 +141,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "visuals1",
-       "svgy": 618,
+       "svgy": 614,
        "svgx": 1006,
        "title": "The Visual Record - Default View",
        "imageName": "15-visuals-default",
@@ -149,7 +149,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "visuals2",
-       "svgy": 746,
+       "svgy": 742,
        "svgx": 1006,
        "title": "The Visual Record - Filters",
        "imageName": "16-visuals-filters",
@@ -157,7 +157,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "visuals3",
-       "svgy": 874,
+       "svgy": 869,
        "svgx": 1006,
        "title": "The Visual Record - Filter Selections",
        "imageName": "17-visuals-filter-selections",
@@ -165,7 +165,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "visuals4",
-       "svgy": 1002,
+       "svgy": 996,
        "svgx": 1006,
        "title": "The Visual Record - Filter Results",
        "imageName": "18-visuals-filter-results",
@@ -173,7 +173,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "visuals5",
-       "svgy": 1130,
+       "svgy": 1123,
        "svgx": 1006,
        "title": "The Visual Record - Item Detail",
        "imageName": "19-visuals-item",
@@ -181,7 +181,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "timeline1",
-       "svgy": 860,
+       "svgy": 869,
        "svgx": 1156,
        "title": "Timeline",
        "imageName": "20-timeline-default",
@@ -189,7 +189,7 @@ var mapApp = new Vue({
      },
      {
        "slug": "timeline2",
-       "svgy": 988,
+       "svgy": 996,
        "svgx": 1156,
        "title": "Timeline - Event Popup",
        "imageName": "21-timeline-event-popup",

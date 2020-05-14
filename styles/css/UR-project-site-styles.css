@@ -192,8 +192,9 @@ nav {
   right: 1.6em;
 }
 
-#rects a image {
-  border: 1px solid #ddd;
+.thumb-label-text {
+  font-family: "FontinSans-Regular";
+  font-size: 12px;
 }
 
 .menu-page {
@@ -204,7 +205,7 @@ nav {
 
 .graphic-menu {
   border-top: 1px solid #ddd;
-  max-width: 75%;
+  max-width: 83%;
 }
 
 /*# sourceMappingURL=UR-project-site-styles.css.map */
