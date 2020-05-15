@@ -381,13 +381,13 @@ nav.main-menu li.selected a {
 }
 
 .dots li {
-  position: relative;
+  cursor: pointer;
   display: block;
   float: left;
-  margin: 0 0.5em;
-  width: 0.5em;
   height: 0.5em;
-  cursor: pointer;
+  margin: 0 0.5em;
+  position: relative;
+  width: 0.5em;
 }
 
 .dots li a {
@@ -397,7 +397,7 @@ nav.main-menu li.selected a {
   height: 100%;
   outline: none;
   border-radius: 50%;
-  background-color: #e4e0c7;
+  background-color: rgba(255, 255, 255, 0.3);
   text-indent: -999em;
   cursor: pointer;
   /* make the text accessible to screen readers */
@@ -407,8 +407,7 @@ nav.main-menu li.selected a {
 /* Fill up */
 .dots-fillup li a {
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: inset 0 0 0 2px white;
+  box-shadow: inset 0 0 0 2px #bbb071;
   transition: background 0.3s;
 }
 
@@ -419,14 +418,14 @@ nav.main-menu li.selected a {
   height: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #bbb071;
   box-shadow: 0 0 1px #fff;
   transition: height 0.3s;
 }
 
 .dots-fillup li a:hover,
 .dots-fillup li a:focus {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #e4e0c7;
 }
 
 .dots-fillup li.current a::after {
