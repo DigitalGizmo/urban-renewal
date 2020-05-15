@@ -21,3 +21,68 @@ nav.main-menu {
 	}
 
 }
+// dot chapter navigation
+.dots ul {
+	cursor: default;
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 1em;
+	top: 40%;
+}
+
+.dots li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 $dot-size;
+	width: $dot-size;
+	height: $dot-size;
+	cursor: pointer;
+}
+
+.dots li a {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: none;
+	border-radius: 50%;
+	//background-color: #fff;
+	//background-color: rgba(255,255,255,0.3);
+	background-color: $base-font-color;
+	text-indent: -999em;
+	cursor: pointer; /* make the text accessible to screen readers */
+	position: absolute;
+}
+
+/* Fill up */
+.dots-fillup li a {
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+	box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
+	transition: background 0.3s;
+}
+
+.dots-fillup li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 1px #fff;
+	transition: height 0.3s;
+}
+
+.dots-fillup li a:hover,
+.dots-fillup li a:focus {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.dots-fillup li.current a::after {
+	height: 100%;
+}
