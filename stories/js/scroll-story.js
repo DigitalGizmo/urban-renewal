@@ -1,3 +1,20 @@
+// Dropdown menu for chapters
+$(document).ready(function(){
+	$("#dropdown-parent a").hover(function(){
+		console.log(' got to drop hover');
+		$(".dropdown-menu", this).slideDown(100);
+	}, function(){
+		$(".dropdown-menu", this).stop().slideUp(100);
+	});
+	$(document).on("click", "#dropdown-parent a", function(event){
+		console.log(' got to drop click --');
+	});
+})
+
+$(document).on("click", "#greg a", function(event){
+	console.log(' got to home click --');
+});
+
 // Midway on shifting element objects and names to arrays in order to 
 // create multi-chapter loops for each task.
 
