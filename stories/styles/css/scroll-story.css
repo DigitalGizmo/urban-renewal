@@ -369,6 +369,12 @@ nav.main-menu li.selected a {
   color: #B25900;
 }
 
+header.story-title nav#fred {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
 .dots ul {
   cursor: default;
   display: inline-block;

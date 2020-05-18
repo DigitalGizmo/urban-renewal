@@ -103,9 +103,9 @@ var mapApp = new Vue({
        "slug": "personal5",
        "svgy": 1123,
        "svgx": 297,
-       "title": "Personal Stories - City Menu ToolTip",
-       "imageName": "11-personal-stories-albany-popup",
-       "shortTitle": "City Menu Tooltip"
+       "title": "Personal Stories - Story Page",
+       "imageName": "13-personal-stories-long-story",
+       "shortTitle": "Story Page"
      },
      {
        "slug": "map1",
@@ -123,8 +123,25 @@ var mapApp = new Vue({
        "imageName": "14-map-neighborhood",
        "shortTitle": "Albany Map"
      },
+
      {
        "slug": "theme1",
+       "svgy": 235,
+       "svgx": 862,
+       "title": "Story - Theme Slidebar",
+       "imageName": "22-theme-slidebar",
+       "shortTitle": "Theme Slidebar"
+     },
+     {
+       "slug": "theme2",
+       "svgy": 362,
+       "svgx": 862,
+       "title": "Story - Theme Slidebar Out",
+       "imageName": "22-theme-slidebar-out",
+       "shortTitle": "Theme Slidebar Out"
+     },
+     {
+       "slug": "theme3",
        "svgy": 488,
        "svgx": 862,
        "title": "Themes & Essays - Menu",
@@ -132,7 +149,7 @@ var mapApp = new Vue({
        "shortTitle": "Theme Menu"
      },
      {
-       "slug": "theme2",
+       "slug": "theme4",
        "svgy": 614,
        "svgx": 862,
        "title": "Themes & Essays - Theme Narrative",
