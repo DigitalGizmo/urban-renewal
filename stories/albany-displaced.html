@@ -25,6 +25,11 @@
 		.dropdown-menu{
 			display: none;
 		}
+		header.story-title nav#dropdown-parent {
+		  position: absolute;
+		  top: 1em;
+		  left: 1em;
+		}		
 	</style>
  
 </head>
@@ -32,7 +37,7 @@
 <body>
 	<nav class="main-menu">
 		<ul>
-			<li id="greg">
+			<li>
 				<a href="../index.html?mocknum=1">home</a>
 			</li>
 			<li class="selected">
@@ -50,10 +55,15 @@
 		<header class="story-title">
 			<h3 class="grid-title">Albany: Lost Places/Displaced People</h3>		
 			<h1>The Reaction to Redevelopment</h1>
-			<nav id="fred"><a href="#">Chapters &rarr;</a>
+			<nav id="dropdown-parent"><a href="#">Chapters &rarr;</a>
 		      <ul class="dropdown-menu">
-		        <li><a href="#">Dropdown Link</a></li>
-		        <li><a href="#">Another Dropdown Link</a></li>
+				<li><a href="#chapter1">The Immediate Response</a></li>
+				<li><a href="#chapter2">Hope or Hoax?</a></li>
+				<li><a href="#chapter3">Before the South Mall</a></li>
+				<li><a href="#chapter4">Lost Homes, Uprooted Neighborhoods</a></li>
+				<li><a href="#chapter5">Designing the South Mall</a></li>
+				<li><a href="#chapter6">Where Did All The People Go?</a></li>
+				<li><a href="#chapter7">98-Acre Wasteland</a></li>
 		      </ul>
 			</nav>
 		</header>

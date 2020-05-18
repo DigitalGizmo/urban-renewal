@@ -22,22 +22,9 @@ const sanborn   = L.tileLayer('tiles/sanborn/{z}/{x}/{y}.png', {
     tms: true
 })
 
-function polystyleX(feature) {
-	console.log(" -- polystyle name: " + feature.properties.name);
-	switch (feature.properties.name) {
-		case 'state': return {color: "#cc2233"};
-		case 'boarding':   return {color: "#22cc33"};
-		case 'hudson':   return {color: "#2233cc"};
-		case 'cathedral':   return {color: "#ee1144"};
-		case 'market':   return {color: "#aa8844"};
-		case 'pearl':   return {color: "#1144ee"};
-		case 'gut':   return {color: "#44ee11"};
-	};
-}
-
 function polystyle2(feature) {
 	let fColor = 'placeholder'
-	console.log(" -- polystyle name: " + feature.properties.name);
+	// console.log(" -- polystyle name: " + feature.properties.name);
 	switch (feature.properties.name) {
 		case 'state':
 			fColor = 'blue';
