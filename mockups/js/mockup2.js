@@ -125,76 +125,68 @@ var mapApp = new Vue({
      },
 
      {
-       "slug": "theme1",
+       "slug": "visuals1",
        "svgy": 235,
        "svgx": 862,
-       "title": "Story - Theme Slidebar",
-       "imageName": "22-theme-slidebar",
-       "shortTitle": "Theme Slidebar"
-     },
-     {
-       "slug": "theme2",
-       "svgy": 362,
-       "svgx": 862,
-       "title": "Story - Theme Slidebar Out",
-       "imageName": "22-theme-slidebar-out",
-       "shortTitle": "Theme Slidebar Out"
-     },
-     {
-       "slug": "theme3",
-       "svgy": 488,
-       "svgx": 862,
-       "title": "Themes & Essays - Menu",
-       "imageName": "22-theme-menu",
-       "shortTitle": "Theme Menu"
-     },
-     {
-       "slug": "theme4",
-       "svgy": 614,
-       "svgx": 862,
-       "title": "Themes & Essays - Theme Narrative",
-       "imageName": "22-theme-narrative",
-       "shortTitle": "Theme Narrative"
-     },
-     {
-       "slug": "visuals1",
-       "svgy": 614,
-       "svgx": 1006,
        "title": "The Visual Record - Default View",
        "imageName": "15-visuals-default",
        "shortTitle": "Visual Record"
      },
      {
        "slug": "visuals2",
-       "svgy": 742,
-       "svgx": 1006,
+       "svgy": 362,
+       "svgx": 862,
        "title": "The Visual Record - Filters",
        "imageName": "16-visuals-filters",
        "shortTitle": "Filters"
      },
      {
        "slug": "visuals3",
-       "svgy": 869,
-       "svgx": 1006,
+       "svgy": 488,
+       "svgx": 862,
        "title": "The Visual Record - Filter Selections",
        "imageName": "17-visuals-filter-selections",
        "shortTitle": "Filter Selections"
      },
      {
        "slug": "visuals4",
-       "svgy": 996,
-       "svgx": 1006,
+       "svgy": 614,
+       "svgx": 862,
        "title": "The Visual Record - Filter Results",
        "imageName": "18-visuals-filter-results",
        "shortTitle": "Filter Results"
      },
      {
        "slug": "visuals5",
-       "svgy": 1123,
-       "svgx": 1006,
+       "svgy": 742,
+       "svgx": 862,
        "title": "The Visual Record - Item Detail",
        "imageName": "19-visuals-item",
        "shortTitle": "Item Detail"
+     },     
+     {
+       "slug": "theme1",
+       "svgy": 742,
+       "svgx": 1006,
+       "title": "Themes & Essays - Menu",
+       "imageName": "22-theme-menu",
+       "shortTitle": "Theme Menu"
+     },
+     {
+       "slug": "theme2",
+       "svgy": 869,
+       "svgx": 1006,
+       "title": "Themes & Essays - Slidebar",
+       "imageName": "22-theme-slidebar-out",
+       "shortTitle": "Theme Slidebar Out"
+     },
+     {
+       "slug": "theme3",
+       "svgy": 996,
+       "svgx": 1006,
+       "title": "Themes & Essays - Theme Narrative",
+       "imageName": "22-theme-narrative",
+       "shortTitle": "Theme Narrative"
      },
      {
        "slug": "timeline1",
