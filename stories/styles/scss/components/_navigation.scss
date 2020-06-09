@@ -22,13 +22,27 @@ nav.main-menu {
 
 }
 
-// chapter drop down menu
-header.story-title {
+#mapdiv img {border: none;}	
+ 
 
-nav#fred {
-		position: absolute;
-		top: 1em;
-		left: 1em;
+// chapter drop down menu
+.dropdown-menu {
+	display: none;
+}
+
+header.story-title nav#dropdown-parent {
+  position: absolute;
+  top: 35%;
+  left: 1.5em;
+}
+
+.dropdown-menu {
+	list-style-type: none;
+
+	li a {
+		background-color: $accent-color;
+		font-size: $small-font-size;
+		padding: 3px $small-spacing;
 	}
 }
 
@@ -65,6 +79,16 @@ nav#fred {
 	text-indent: -999em;
 	cursor: pointer; /* make the text accessible to screen readers */
 	position: absolute;
+}
+
+// Don's tool tip titles
+.dot-title {
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 1em;
+  display: none;
 }
 
 /* Fill up */

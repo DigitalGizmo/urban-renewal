@@ -369,10 +369,27 @@ nav.main-menu li.selected a {
   color: #B25900;
 }
 
-header.story-title nav#fred {
+#mapdiv img {
+  border: none;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+header.story-title nav#dropdown-parent {
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: 35%;
+  left: 1.5em;
+}
+
+.dropdown-menu {
+  list-style-type: none;
+}
+.dropdown-menu li a {
+  background-color: #B25900;
+  font-size: 0.75em;
+  padding: 3px 0.8em;
 }
 
 .dots ul {
@@ -408,6 +425,15 @@ header.story-title nav#fred {
   cursor: pointer;
   /* make the text accessible to screen readers */
   position: absolute;
+}
+
+.dot-title {
+  top: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 1em;
+  display: none;
 }
 
 /* Fill up */
