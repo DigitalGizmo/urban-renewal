@@ -202,6 +202,9 @@ nav {
   margin-right: auto;
   max-width: 1000px;
 }
+.menu-page p {
+  font-size: 0.8em;
+}
 
 .graphic-menu {
   border-top: 1px solid #ddd;
