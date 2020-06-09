@@ -1,10 +1,19 @@
 // Dropdown menu for chapters
 $(document).ready(function(){
+	// Chapter dropdown in top title banner
 	$("#dropdown-parent").hover(function(){
 		// console.log(' got to drop hover');
 		$(".dropdown-menu").slideDown(100);
 	}, function(){
 		$(".dropdown-menu").stop().slideUp(100);
+	});
+	// Dot titles on hover
+	$(".dots li a").hover(function(event){
+		console.log(' got to dot hover 3');
+		$(".dot-title").html($(event.target).html());
+		$(".dot-title").css('display', 'block');
+	}, function(){
+		$(".dot-title").css('display', 'none');
 	});
 })
 
