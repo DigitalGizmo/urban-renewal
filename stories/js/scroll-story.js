@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$(".dropdown-menu").stop().slideUp(100);
 	});
 	// Dot titles on hover
-	$(".dots li a").hover(function(event){
+	$(".dots li").hover(function(event){
 		console.log(' got to dot hover 3');
 		$(".dot-title").html($(event.target).html());
 		$(".dot-title").css('display', 'block');
