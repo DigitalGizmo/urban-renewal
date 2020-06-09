@@ -428,12 +428,12 @@ header.story-title nav#dropdown-parent {
 }
 
 .dot-title {
-  top: 50%;
-  margin: 0;
-  padding: 0;
+  color: #bbb071;
+  display: none;
+  font-size: 0.75em;
   position: absolute;
   right: 1em;
-  display: none;
+  top: 2px;
 }
 
 /* Fill up */

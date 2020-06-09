@@ -83,12 +83,12 @@ header.story-title nav#dropdown-parent {
 
 // Don's tool tip titles
 .dot-title {
-  top: 50%;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 1em;
-  display: none;
+	color: darken($base-font-color, 25%);
+	display: none;
+	font-size: $small-font-size;
+	position: absolute;
+	right: 1em;
+	top: 2px;
 }
 
 /* Fill up */
