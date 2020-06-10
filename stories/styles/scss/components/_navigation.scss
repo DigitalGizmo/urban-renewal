@@ -40,7 +40,8 @@ header.story-title nav#dropdown-parent {
 	list-style-type: none;
 
 	li a {
-		background-color: $accent-color;
+		background-color: rgba(178, 89, 0, 0.75);
+		border: 1px solid $accent-color;
 		font-size: $small-font-size;
 		padding: 3px $small-spacing;
 	}

@@ -67,7 +67,7 @@ div.full-image {
 }
 
 .image-panel	{
-//	border: 1px solid blue;		
+//	image height puts captions in correct vertical position		
 	height: 80vh;
 	position: relative;
 }
@@ -89,6 +89,7 @@ div.full-image {
 .image-panel div img, div.full-image img	{
 	border: thin solid rgb(97, 92, 61);
 	max-width: 100%;
+	height: auto;
 	margin-bottom: $base-spacing;
 }
 

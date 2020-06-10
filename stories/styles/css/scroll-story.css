@@ -168,10 +168,6 @@ h3.grid-title {
   text-transform: uppercase;
 }
 
-.narrative p.poo {
-  position: relative;
-}
-
 .narrative p, ol li {
   font-size: 1.25em;
 }
@@ -180,17 +176,25 @@ h3.grid-title {
   color: #B25900;
 }
 
-.narrative p.poo .sidebar a {
-  background-color: #558000;
-  border-radius: 2px 2px 0 0;
-  color: #e4e0c7;
-  font-size: 0.75em;
-  padding: 0.4em;
+.sidebar-parent {
+  width: 100vw;
+  overflow: visible;
   position: absolute;
-  bottom: 0;
-  right: -60%;
+  left: 0;
+}
+
+.sidebar {
+  background-color: #558000;
+  border-radius: 0 0 3px 3px;
+  position: absolute;
+  bottom: 2em;
   transform-origin: 0 0;
   transform: rotate(-90deg);
+}
+.sidebar a {
+  color: #e4e0c7;
+  font-size: 1em;
+  padding: 1.6em;
 }
 
 body {
@@ -276,6 +280,7 @@ div.full-image p {
 .image-panel div img, div.full-image img {
   border: thin solid #615c3d;
   max-width: 100%;
+  height: auto;
   margin-bottom: 1.6em;
 }
 
@@ -387,7 +392,8 @@ header.story-title nav#dropdown-parent {
   list-style-type: none;
 }
 .dropdown-menu li a {
-  background-color: #B25900;
+  background-color: rgba(178, 89, 0, 0.75);
+  border: 1px solid #B25900;
   font-size: 0.75em;
   padding: 3px 0.8em;
 }
