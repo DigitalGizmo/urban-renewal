@@ -98,6 +98,18 @@ body {
   font-size: 1.25em;
   font-weight: 400;
   line-height: 1.6;
+  /*for medium displays, less than or equal to 768em */
+  /*for medium displays, less than or equal to 600px */
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.75em;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.5em;
+  }
 }
 
 h1,
@@ -392,7 +404,7 @@ header.story-title nav#dropdown-parent {
   list-style-type: none;
 }
 .dropdown-menu li a {
-  background-color: rgba(178, 89, 0, 0.75);
+  background-color: rgba(178, 89, 0, 0.9);
   border: 1px solid #B25900;
   font-size: 0.75em;
   padding: 3px 0.8em;

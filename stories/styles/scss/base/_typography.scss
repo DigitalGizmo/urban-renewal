@@ -12,6 +12,16 @@ body {
   font-size: $base-font-size;
   font-weight: $weight-book;
   line-height: $base-line-height;
+
+  /*for medium displays, less than or equal to 768em */
+  @media screen and (max-width: 768px) {
+    font-size: $small-font-size;
+  }
+
+  /*for medium displays, less than or equal to 600px */
+  @media screen and (max-width: 600px) {
+    font-size: $very-small-font-size;
+  } 
 }
 
 h1,

@@ -1,7 +1,7 @@
 // Breakpoints
 $very-small-screen: em(420) !default;
-$small-screen: em(879) !default;
-$medium-screen: em(640) !default;
+$small-screen: em(600) !default;
+$medium-screen: em(768) !default;
 $large-screen: em(880) !default;
 
 // Typography
@@ -9,6 +9,7 @@ $base-font-family: $officina-sans-itc;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
+$very-small-font-size: 0.5em;
 $small-font-size: 0.75em;
 $smallish-font-size: 1em;
 $base-font-size: 1.25em;

@@ -48,16 +48,16 @@ div.full-image {
 	position: relative;
 
 	& p {
-	background-color: $dark-gray;
-	border: $base-border;
-	opacity: 0.75;
-	float: left;
-	margin-left: $base-spacing;
-	padding: $base-spacing;
-	position: absolute;
-	bottom: 3em;
-	width: 18%;
-	z-index: 8;
+		background-color: $dark-gray;
+		border: $base-border;
+		opacity: 0.75;
+		float: left;
+		margin-left: $base-spacing;
+		padding: $base-spacing;
+		position: absolute;
+		bottom: 3em;
+		width: 18%;
+		z-index: 8;
 	}
 }
 
