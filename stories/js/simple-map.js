@@ -133,6 +133,27 @@ const districtGut = new L.GeoJSON(district_gut, {style: polystyle2});
 
 const districts = [districtState, districtBoarding, districtHudson, districtCathedral, districtMarket, districtPearl, districtGut];
 
+// District Labels
+const marker = new L.marker([42.6518, -73.7575], // 42.6503, -73.76 -- 42.65461619, -73.7615236
+	{ opacity: 0.01 }); //opacity may be set to zero
+marker.bindTooltip("State Street <br/>Office District", 
+	{permanent: true, className: "district-label", offset: [0, 0] });
+
+// Create District Labels.
+const labelTexts = ["State Street <br/>Office District", "Rooming House <br/>District"];
+const labelLats = [42.6518, 42.6506];
+const labelLngs = [-73.7575, -73.7579];
+const districtLables = [];
+for (let i = 0; i < labelTexts.length; i++) {
+	let marker = new L.marker(
+		[labelLats[i], labelLngs[i]], 
+		{ opacity: 0.01 }
+	); 
+	marker.bindTooltip(labelTexts[i], 
+		{permanent: true, className: "district-label", offset: [0, 0] });
+	districtLables.push(marker);
+}
+
 // ----- set map -----
 // regular map setting
 const urmap = L.map('mapdiv', {
@@ -178,13 +199,20 @@ function showDistrict(lat, lon, zoomLevel, districtId) {
 	// Because we can only get to this sequentially we (should)
 	// know that it's not already present
 	districts[districtId].addTo(urmap);
-	// remove any other districts
+	// Remove any other districts.
 	for (let i = 0; i < districts.length; i++) {
 		if (i != districtId) { // don't delete the one we just added!			
 			if (urmap.hasLayer(districts[i])) {
 				// console.log(" -- got to not-take");
 				urmap.removeLayer(districts[i]);
 			}
+		}
+	}
+	// Remove labels
+	if (urmap.hasLayer(districtLables[0])) {
+		// console.log(" -- got to not-take");
+		for (let i = 0; i < districtLables.length; i++) {
+			urmap.removeLayer(districtLables[i]);
 		}
 	}
 }
@@ -198,7 +226,8 @@ function showAllDistricts(lat, lon, zoomLevel) {
 			districts[i].addTo(urmap);
 		}
 	}
+	// Add district labels
+	for (let i = 0; i < districtLables.length; i++) {
+		districtLables[i].addTo(urmap);
+	}
 }
-
-
-

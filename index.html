@@ -199,6 +199,10 @@
 
       <nav> 
         <a
+          v-if="currIndex === 13"
+          href="map-demo.html"
+        >Map Demo index: {{ currIndex }} |</a>
+        <a
         v-if="prevExists"
         href="#"
         @click.stop.prevent="incrementMockup('prev')"
