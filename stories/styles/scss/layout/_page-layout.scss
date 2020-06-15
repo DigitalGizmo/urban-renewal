@@ -139,6 +139,11 @@ a.caption-link  {
 	text-decoration: underline;
 }
 
+// to make the last caption on the guided map taller
+#thing10 p.gallery-text {
+	height: 10em;
+}
+
 // Video
 #video-content {
 	position: relative;

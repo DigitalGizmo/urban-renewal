@@ -147,7 +147,8 @@ const districtLables = [];
 for (let i = 0; i < labelTexts.length; i++) {
 	let marker = new L.marker(
 		[labelLats[i], labelLngs[i]], 
-		{ opacity: 0.01 }
+		// for map marker (lollipop) 
+		{ opacity: 0.0 }
 	); 
 	marker.bindTooltip(labelTexts[i], 
 		{permanent: true, className: "district-label", offset: [0, 0] });

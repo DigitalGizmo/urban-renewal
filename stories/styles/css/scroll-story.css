@@ -337,6 +337,10 @@ a.caption-link {
   text-decoration: underline;
 }
 
+#thing10 p.gallery-text {
+  height: 10em;
+}
+
 #video-content {
   position: relative;
   padding-top: 56.25%;
