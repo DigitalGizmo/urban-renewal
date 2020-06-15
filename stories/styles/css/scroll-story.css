@@ -337,6 +337,10 @@ a.caption-link {
   text-decoration: underline;
 }
 
+#thing10 p.gallery-text {
+  height: 10em;
+}
+
 #video-content {
   position: relative;
   padding-top: 56.25%;
@@ -363,8 +367,18 @@ a.caption-link {
   width: 50%;
 }
 
-.caption-panel div.last-one {
-  margin-bottom: 20em;
+.leaflet-tooltip {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: "itc-officina-sans-pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: 500;
+  padding: 0;
+}
+
+.leaflet-tooltip-left:before {
+  display: none;
 }
 
 nav.main-menu {
