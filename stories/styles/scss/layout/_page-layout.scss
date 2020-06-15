@@ -173,7 +173,19 @@ a.caption-link  {
   }
 }
 
-//do we still need this? if so, put the class back in the markup
-.caption-panel div.last-one {
-	margin-bottom: 20em;
+// styles for guided map neighborhood labels
+.leaflet-tooltip {
+	background: none;
+	border: none;
+	box-shadow: none;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $weight-medium;
+	padding: 0;
+//	transform: rotate(40deg);
+
+}
+
+.leaflet-tooltip-left:before {
+	display: none;
 }
