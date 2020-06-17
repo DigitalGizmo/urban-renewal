@@ -220,6 +220,7 @@ var mapApp = new Vue({
     // From: https://stackoverflow.com/questions/35914069/
     //   how-can-i-get-query-parameters-from-a-url-in-vue-js  
     let uri = window.location.href.split('?');
+    // Looks like: http://local.digitalgizmo.com/urban-renewal/index.html?mocknum=14
     if (uri.length == 2) {
       let vars = uri[1].split('&');
       let getVars = {};

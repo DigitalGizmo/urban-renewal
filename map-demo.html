@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Picturing Urban Renewal - Map Demo</title>
   <link rel="stylesheet" href="styles/css/UR-project-site-styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 </head>
 
 <body>
-  <div class="video-page">
+  <div id="mapdemo" class="video-page">
     <h2>Picturing Urban Renewal Mockups</h2>
     <h1>Map Demo</h1>
-    <p><a href="index.html?mocknum=14">return</a></p>
+    <p>
+      <a 
+        v-if="cameFromMockup"
+        href="index.html?mocknum=14">return</a>
+      <a 
+        v-else
+        href="index.html">menu</a>
+    </p>
 
     <video width="1000" controls>
       <source src="media/map-demo.mp4" type="video/mp4">
@@ -20,6 +28,8 @@
     </video>
 
   </div>
+  <script src="mockups/js/mapdemo.js" type="text/javascript"></script>
+
 </body>
 
 </html>

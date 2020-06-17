@@ -134,20 +134,37 @@ const districtGut = new L.GeoJSON(district_gut, {style: polystyle2});
 const districts = [districtState, districtBoarding, districtHudson, districtCathedral, districtMarket, districtPearl, districtGut];
 
 // District Labels
-const marker = new L.marker([42.6518, -73.7575], // 42.6503, -73.76 -- 42.65461619, -73.7615236
-	{ opacity: 0.01 }); //opacity may be set to zero
-marker.bindTooltip("State Street <br/>Office District", 
-	{permanent: true, className: "district-label", offset: [0, 0] });
+// const marker = new L.marker([42.6518, -73.7575], // 42.6503, -73.76 -- 42.65461619, -73.7615236
+// 	{ opacity: 0.01 }); //opacity may be set to zero
+// marker.bindTooltip("State Street <br/>Office District", 
+// 	{permanent: true, className: "district-label", offset: [0, 0] });
 
 // Create District Labels.
-const labelTexts = ["State Street <br/>Office District", "Rooming House <br/>District"];
-const labelLats = [42.6518, 42.6506];
-const labelLngs = [-73.7575, -73.7579];
+const labelTexts = [
+	"State Street <br/>Office District", 
+	"Rooming House <br/>District",
+	"Hudson Ave <br/> Shopping District",
+	"Rooming House <br/>District",
+	"Cathedral Area <br/>Residential District",
+	"Market District",
+	"S. Pearl St <br/>Shopping <br/>District",
+	"The Gut"
+];
+const labelLatLngs = [
+	[42.6519, -73.7573], 
+	[42.6509, -73.7583], 
+	[42.6501, -73.7584],
+	[42.6491, -73.7587],
+	[42.6479, -73.7635],
+	[42.6478, -73.7553],
+	[42.6466, -73.7531],
+	[42.6455, -73.7519]
+	];
 const districtLables = [];
 for (let i = 0; i < labelTexts.length; i++) {
 	let marker = new L.marker(
-		[labelLats[i], labelLngs[i]], 
-		// for map marker (lollipop) 
+		labelLatLngs[i], 
+		// For map marker (lollipop) -- make it invisible.
 		{ opacity: 0.0 }
 	); 
 	marker.bindTooltip(labelTexts[i], 
@@ -232,3 +249,10 @@ function showAllDistricts(lat, lon, zoomLevel) {
 		districtLables[i].addTo(urmap);
 	}
 }
+
+// // Temp - for locating District Labels
+// urmap.on('click', getLocation); 
+// function getLocation(e) {
+//     alert("Lat, Lon : " + e.latlng.lat.toFixed(4) + ", " + e.latlng.lng.toFixed(4));
+// }
+
