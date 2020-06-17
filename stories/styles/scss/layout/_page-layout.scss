@@ -181,11 +181,12 @@ a.caption-link  {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	font-weight: $weight-medium;
+	line-height: $heading-line-height;
 	padding: 0;
 //	transform: rotate(40deg);
 
 }
 
-.leaflet-tooltip-left:before {
+.leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
 	display: none;
 }
